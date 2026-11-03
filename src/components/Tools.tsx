@@ -45,7 +45,7 @@ export default function Tools() {
             <span className="kicker-dot" /> Tools &amp; platforms
           </p>
           <h2 className="tools__title">
-            {'The stack behind the strategy.'.split(' ').map((w, i) => (
+            {'The stack behind my strategy.'.split(' ').map((w, i) => (
               <span key={i} className="sw">
                 <span className="sw__in">{w}</span>
               </span>

@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef } from 'react';
 import { gsap, prefersReduced, isTouch } from '../lib/motion';
 import { IMAGES } from '../data';
 import { Spark } from './Primitives';
+import HeroCards from './HeroCards';
 
 type Tile = { kind: 'photo'; src: string } | { kind: 'hint'; label: string; bg: string; light?: boolean };
 
@@ -201,6 +202,7 @@ export default function Hero({ ready }: { ready: boolean }) {
           <div className="hero__photo-veil" />
         </div>
         <div className="hero__grid-lines" />
+        <HeroCards ready={ready} />
 
         {!reduced && (
           <div className="hero__tiles" aria-hidden="true">
@@ -246,8 +248,8 @@ export default function Hero({ ready }: { ready: boolean }) {
             </span>
           </h1>
           <div className="hero__sub">
-            <p className="hero__role">Senior SEO, AEO &amp; GEO Strategist</p>
-            <p className="hero__role-2">AI Search &amp; Performance Marketing</p>
+            <p className="hero__role">I’m a Senior SEO, AEO &amp; GEO Strategist</p>
+            <p className="hero__role-2">AI Search &amp; Performance Marketing Expert</p>
           </div>
           <span className="hero__scroll" aria-hidden="true">
             <span className="hero__chevrons">

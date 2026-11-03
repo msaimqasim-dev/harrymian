@@ -1,0 +1,13 @@
+.hero-cards { position: absolute; inset: 0; z-index: 5; pointer-events: none; perspective: 1400px; }
+.hero-cards__anchor { position: absolute; width: 8vw; aspect-ratio: .71; transform: translate(-50%, -50%) rotate(var(--card-angle, 0deg)); pointer-events: auto; }
+.hero-cards__scatter, .hero-cards__deal, .hero-cards__float, .hero-cards__drift, .hero-cards__lift { width: 100%; height: 100%; }
+.hero-cards__deal { opacity: 0; visibility: hidden; }
+.hero-cards__lift { transition: transform .65s cubic-bezier(.16, 1, .3, 1); }
+.hero:has(.hero-cards) .hero__lockup { pointer-events: none; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hero-cards__anchor:hover .hero-cards__lift { transform: translateY(-9px) scale(1.045); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-cards__deal { opacity: 1; visibility: visible; }
+  .hero-cards .holo { transition: none; }
+}

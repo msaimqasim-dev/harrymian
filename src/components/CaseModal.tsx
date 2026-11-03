@@ -14,7 +14,7 @@ type Props = {
 const SECTIONS = [
   { id: 'cm-overview', label: 'Overview' },
   { id: 'cm-challenge', label: 'Challenge' },
-  { id: 'cm-approach', label: 'Approach' },
+  { id: 'cm-approach', label: 'My approach' },
   { id: 'cm-outcomes', label: 'Deliverables & measures' },
 ];
 
@@ -245,7 +245,7 @@ export default function CaseModal({ index, origin, onClose, onNavigate }: Props)
               <div className="cm__rail-card">
                 <p>Want this approach applied to your brand?</p>
                 <a href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Concept: ${work.title}`)}`} className="cm__rail-cta roll-trigger">
-                  <Roll>Email Harry</Roll>
+                  <Roll>Email me</Roll>
                 </a>
               </div>
               <p className="cm__rail-status">
@@ -274,7 +274,7 @@ export default function CaseModal({ index, origin, onClose, onNavigate }: Props)
               </section>
 
               <section className="cm__section cm__section--band cm__reveal" id="cm-approach">
-                <div className="cm__label cm__label--onband"><span>03</span> The approach</div>
+                <div className="cm__label cm__label--onband"><span>03</span> My approach</div>
                 <ol className="cm__approach">
                   {cs.approach.map((a, i) => (
                     <li key={a.title} className="cm__step">
@@ -308,7 +308,7 @@ export default function CaseModal({ index, origin, onClose, onNavigate }: Props)
                 </ul>
 
                 <p className="cm__disclaimer">
-                  This is a conceptual case study illustrating Harry’s methodology. It does not represent a completed client engagement, and no outcomes are claimed.
+                  This conceptual case study illustrates my methodology. It does not represent a completed client engagement, and I’m not claiming any outcomes.
                 </p>
               </section>
 

@@ -68,7 +68,7 @@ export default function Credentials() {
             <span className="kicker-dot" /> Education &amp; certifications
           </p>
           <h2 className="creds__title">
-            {'Grounded in computer science.'.split(' ').map((w, i) => (
+            {'My foundation in computer science.'.split(' ').map((w, i) => (
               <span key={i} className="sw">
                 <span className="sw__in">{w}</span>
               </span>
@@ -92,7 +92,7 @@ export default function Credentials() {
         </div>
 
         <div className="creds__certs">
-          <p className="creds__certs-label">Certifications</p>
+          <p className="creds__certs-label">My certifications</p>
           <div className="creds__fan">
             {CERTS.map((c) => (
               <div key={c.title} className="creds__cert">

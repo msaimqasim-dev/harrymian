@@ -87,7 +87,7 @@ export default function Portfolio() {
         <div className="work__head">
           <div>
             <p className="section-kicker section-kicker--light">
-              <span className="kicker-dot" /> Selected work
+              <span className="kicker-dot" /> My selected work
             </p>
             <h2 className="work__title">
               {'Concepts built for the new search.'.split(' ').map((w, i) => (
@@ -99,7 +99,7 @@ export default function Portfolio() {
           </div>
           <p className="work__note">
             <span className="work__note-badge">Concept work</span>
-            Illustrative placeholders — not completed client engagements. Case studies coming soon.
+            These illustrate my approach, not completed client engagements. My case studies are coming soon.
           </p>
         </div>
 

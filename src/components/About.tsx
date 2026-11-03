@@ -106,10 +106,10 @@ export default function About() {
     <section id="about" ref={root} className="about" data-theme="light">
       <div className="about__inner">
         <p className="about__kicker">
-          <span className="kicker-dot" /> About Harry
+          <span className="kicker-dot" /> About me
         </p>
         <h2 className="about__statement">
-          <SplitWords text="Harry Mian is a senior search strategist specializing in SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and performance marketing." />
+          <SplitWords text="I'm Harry Mian, a Senior SEO, AEO & GEO Strategist specializing in Search Engine Optimization (SEO), Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and performance marketing." />
         </h2>
 
         <div className="about__grid">
@@ -119,18 +119,18 @@ export default function About() {
               <span className="about__plus">+</span>
             </span>
             <p>
-              years growing organic and paid search visibility for brands across ecommerce, SaaS, B2B, healthcare and multi-location services.
+              years I’ve spent growing organic and paid search visibility for brands across ecommerce, SaaS, B2B, healthcare and multi-location services.
             </p>
           </div>
           <div className="about__col">
             <p className="about__lead">
-              His experience spans search visibility programs, technical optimization, AI search strategy, paid media, analytics, content authority and
+              My experience spans search visibility programs, technical optimization, AI search strategy, paid media, analytics, content authority and
               leading search marketing teams.
             </p>
           </div>
           <div className="about__col">
             <p className="about__lead">
-              His approach connects traditional search performance with emerging AI-driven discovery — improving discoverability while keeping business
+              My approach connects traditional search performance with emerging AI-driven discovery — improving discoverability while keeping business
               outcomes central to the strategy.
             </p>
           </div>
@@ -138,7 +138,7 @@ export default function About() {
       </div>
 
       <div className="about__marquee-wrap">
-        <p className="about__marquee-label">Helping brands become visible, cited &amp; recommended across</p>
+        <p className="about__marquee-label">I help brands become visible, cited &amp; recommended across</p>
         <div className="about__marquee" aria-label={PLATFORMS.join(', ')}>
           <div className="about__marquee-track" aria-hidden="true">
             {doubled.map((p, i) => (
@@ -152,7 +152,7 @@ export default function About() {
       </div>
 
       <div className="about__connect">
-        <p className="about__connect-label">Combining</p>
+        <p className="about__connect-label">I combine</p>
         <div className="about__chips">
           {DISCIPLINES.map((d) => (
             <span key={d} className="about__chip">

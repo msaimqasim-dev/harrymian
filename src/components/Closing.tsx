@@ -153,7 +153,7 @@ export default function Closing() {
             </a>
             <div className="closing__actions">
               <a href={`mailto:${EMAIL}`} className="closing__btn closing__btn--primary roll-trigger">
-                <Roll>Send an email</Roll>
+                <Roll>Email me</Roll>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
                   <path d="M7 17 17 7M8 7h9v9" />
                 </svg>
