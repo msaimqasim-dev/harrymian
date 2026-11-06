@@ -1,0 +1,181 @@
+{
+  "holiday": {
+    "source": "https://www.seoworks.co.uk/case-studies/conversion-focussed-content-strategy-for-holiday-parks/",
+    "hero": {
+      "file": "src/assets/cases/originals/holiday/meadow-bay-villages.png",
+      "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/meadow-bay-villages.png",
+      "alt": "Conversion-Focussed Content Strategy Increases Revenue by over 102% for Nationwide Holiday Park Group",
+      "bytes": 1414421
+    },
+    "logo": {
+      "file": "src/assets/cases/originals/holiday/Meadowbay-villages-logo.png",
+      "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/Meadowbay-villages-logo.png",
+      "alt": "",
+      "bytes": 10438
+    },
+    "gallery": [
+      {
+        "file": "src/assets/cases/originals/holiday/Meadowbay-results-3-1024x439.png",
+        "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/Meadowbay-results-3-1024x439.png",
+        "alt": "",
+        "bytes": 24783
+      },
+      {
+        "file": "src/assets/cases/originals/holiday/Meadowbay-results-2-1024x442.png",
+        "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/Meadowbay-results-2-1024x442.png",
+        "alt": "",
+        "bytes": 22151
+      },
+      {
+        "file": "src/assets/cases/originals/holiday/Meadowbay-results-1.png",
+        "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/Meadowbay-results-1.png",
+        "alt": "",
+        "bytes": 16346
+      }
+    ]
+  },
+  "seating": {
+    "source": "https://www.seoworks.co.uk/case-studies/share-of-voice-ai-overviews-for-seating-manufacturer/",
+    "hero": {
+      "file": "src/assets/cases/originals/seating/seating.jpg",
+      "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating.jpg",
+      "alt": "Taking 60% Share of Voice in AI Overviews for a Seating Manufacturer",
+      "bytes": 167753
+    },
+    "logo": {
+      "file": "src/assets/cases/originals/seating/auditoria-services-logo-2.png",
+      "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/auditoria-services-logo-2.png",
+      "alt": "",
+      "bytes": 13367
+    },
+    "gallery": [
+      {
+        "file": "src/assets/cases/originals/seating/1.jpg",
+        "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/1.jpg",
+        "alt": "AI Overview 1",
+        "bytes": 112966
+      },
+      {
+        "file": "src/assets/cases/originals/seating/2.jpg",
+        "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/2.jpg",
+        "alt": "AI Overview 2",
+        "bytes": 109753
+      },
+      {
+        "file": "src/assets/cases/originals/seating/3.jpg",
+        "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/3.jpg",
+        "alt": "AI Overview 3",
+        "bytes": 99612
+      }
+    ]
+  },
+  "pool": {
+    "source": "https://www.seoworks.co.uk/case-studies/ai-overview-visibility-for-pool-rental/",
+    "hero": {
+      "file": "src/assets/cases/originals/pool/Swimple-1.png",
+      "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/Swimple-1.png",
+      "alt": "Growing AI Overview Visibility by 56% for Pool Rental Searches",
+      "bytes": 1379136
+    },
+    "logo": {
+      "file": "src/assets/cases/originals/pool/swimple-logo-blue.png",
+      "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/swimple-logo-blue.png",
+      "alt": "",
+      "bytes": 5422
+    },
+    "gallery": [
+      {
+        "file": "src/assets/cases/originals/pool/Swimple-AIO-2-1024x601.png",
+        "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/Swimple-AIO-2-1024x601.png",
+        "alt": "",
+        "bytes": 123100
+      },
+      {
+        "file": "src/assets/cases/originals/pool/Swimple-AIO-3-1024x570.png",
+        "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/Swimple-AIO-3-1024x570.png",
+        "alt": "",
+        "bytes": 125858
+      },
+      {
+        "file": "src/assets/cases/originals/pool/Swimple-AIO-1.png",
+        "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/06/Swimple-AIO-1.png",
+        "alt": "",
+        "bytes": 109877
+      }
+    ]
+  },
+  "product": {
+    "source": "https://www.seoworks.co.uk/case-studies/product-page-optimisation-seo/",
+    "hero": {
+      "file": "src/assets/cases/originals/product/tarpaflex.png",
+      "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/04/tarpaflex.png",
+      "alt": "Beating Household-Name Retailers With Top Spots for a Specialist Distributor",
+      "bytes": 821970
+    },
+    "logo": {
+      "file": "src/assets/cases/originals/product/tarpalfex-logo-colour.png",
+      "remote": "https://www.seoworks.co.uk/wp-content/uploads/2025/10/tarpalfex-logo-colour.png",
+      "alt": "",
+      "bytes": 17456
+    },
+    "gallery": [
+      {
+        "file": "src/assets/cases/originals/product/tarpaulin-rank-1.jpg",
+        "remote": "https://wordpress-381278-2531408.cloudwaysapps.com/wp-content/uploads/2025/11/tarpaulin-rank-1.jpg",
+        "alt": "",
+        "bytes": 12326
+      }
+    ]
+  },
+  "geo": {
+    "source": "https://www.seoworks.co.uk/case-studies/llm-ai-visibility/",
+    "hero": {
+      "file": "src/assets/cases/originals/geo/AI-SEO-Services-scaled-e1755705296222.jpg",
+      "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/04/AI-SEO-Services-scaled-e1755705296222.jpg",
+      "alt": "Generative Engine Optimisation Strategy Achieves 2000% Increase in AI Referrals",
+      "bytes": 173830
+    },
+    "logo": {
+      "file": "src/assets/cases/originals/geo/seo-works-favicon-rectangle.png",
+      "remote": "https://www.seoworks.co.uk/wp-content/uploads/2025/09/seo-works-favicon-rectangle.png",
+      "alt": "",
+      "bytes": 34084
+    },
+    "gallery": [
+      {
+        "file": "src/assets/cases/originals/geo/chat-gpt-referrals.jpg",
+        "remote": "https://www.seoworks.co.uk/wp-content/uploads/2025/09/chat-gpt-referrals.jpg",
+        "alt": "Increased ChatGPT and AI referrals",
+        "bytes": 28286
+      },
+      {
+        "file": "src/assets/cases/originals/geo/citation-tracking.png",
+        "remote": "https://www.seoworks.co.uk/wp-content/uploads/2025/09/citation-tracking.png",
+        "alt": "Number 1 referenced source for AI LLMs",
+        "bytes": 141949
+      },
+      {
+        "file": "src/assets/cases/originals/geo/cited-in-chatgpt-ai-overviews-ai-mode.jpg",
+        "remote": "https://www.seoworks.co.uk/wp-content/uploads/2025/10/cited-in-chatgpt-ai-overviews-ai-mode.jpg",
+        "alt": "Cited in ChatGPT Google AI Overviews and Google AI mode",
+        "bytes": 167749
+      }
+    ]
+  },
+  "coffee": {
+    "source": "https://www.seoworks.co.uk/case-studies/ecommerce-revenue-from-ai/",
+    "hero": {
+      "file": "src/assets/cases/originals/coffee/coffee2.jpg",
+      "remote": "https://www.seoworks.co.uk/wp-content/uploads/2026/04/coffee2.jpg",
+      "alt": "AI SEO growth for coffee brand",
+      "bytes": 89625
+    },
+    "logo": {
+      "file": "src/assets/cases/originals/coffee/rave-coffee-logo.png",
+      "remote": "https://www.seoworks.co.uk/wp-content/uploads/2025/11/rave-coffee-logo.png",
+      "alt": "",
+      "bytes": 8202
+    },
+    "gallery": []
+  }
+}

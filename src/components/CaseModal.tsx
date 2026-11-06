@@ -1,8 +1,10 @@
 import { useEffect, useLayoutEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { gsap, getLenis, prefersReduced } from '../lib/motion';
-import { CASES, EMAIL, WORK } from '../data';
-import { Roll, Spark } from './Primitives';
+import { WORK } from '../case-studies';
+import { CASE_IMAGES } from '../case-image-assets';
+import './case-studies.css';
+import { Spark } from './Primitives';
 
 type Props = {
   index: number;
@@ -14,8 +16,8 @@ type Props = {
 const SECTIONS = [
   { id: 'cm-overview', label: 'Overview' },
   { id: 'cm-challenge', label: 'Challenge' },
-  { id: 'cm-approach', label: 'My approach' },
-  { id: 'cm-outcomes', label: 'Deliverables & measures' },
+  { id: 'cm-approach', label: 'Strategy' },
+  { id: 'cm-outcomes', label: 'Reported results' },
 ];
 
 export default function CaseModal({ index, origin, onClose, onNavigate }: Props) {
@@ -23,20 +25,25 @@ export default function CaseModal({ index, origin, onClose, onNavigate }: Props)
   const scroller = useRef<HTMLDivElement>(null);
   const closing = useRef(false);
   const first = useRef(true);
+  const returnFocus = useRef(document.activeElement as HTMLElement | null);
   const work = WORK[index];
-  const cs = CASES[work.id];
+  const cs = work;
+  const images = CASE_IMAGES[work.id as keyof typeof CASE_IMAGES];
   const reduced = prefersReduced();
 
   useEffect(() => {
     const l = getLenis();
     l?.stop();
     document.documentElement.classList.add('modal-open');
-    const prevFocus = document.activeElement as HTMLElement | null;
+    const app = document.getElementById('root');
+    const wasInert = app?.inert ?? false;
+    if (app) app.inert = true;
     root.current?.querySelector<HTMLElement>('.cm__close')?.focus({ preventScroll: true });
     return () => {
       l?.start();
       document.documentElement.classList.remove('modal-open');
-      prevFocus?.focus?.({ preventScroll: true });
+      if (app) app.inert = wasInert;
+      returnFocus.current?.focus?.({ preventScroll: true });
     };
   }, []);
 
@@ -44,8 +51,10 @@ export default function CaseModal({ index, origin, onClose, onNavigate }: Props)
     const q = gsap.utils.selector(root.current);
     const sc = scroller.current!;
     sc.scrollTo(0, 0);
+    root.current?.querySelector<HTMLElement>('.cm__close')?.focus({ preventScroll: true });
     const ctx = gsap.context(() => {
       if (reduced) {
+        gsap.set(q('.cm__shared'), { opacity: 0 });
         gsap.fromTo(root.current, { opacity: 0 }, { opacity: 1, duration: 0.2 });
         return;
       }
@@ -111,7 +120,7 @@ export default function CaseModal({ index, origin, onClose, onNavigate }: Props)
         let cur = 0;
         SECTIONS.forEach((s, i) => {
           const el = sc.querySelector('#' + s.id);
-          if (el && (el as HTMLElement).offsetTop - sc.scrollTop < window.innerHeight * 0.45) cur = i;
+          if (el && el.getBoundingClientRect().top - sc.getBoundingClientRect().top < sc.clientHeight * 0.45) cur = i;
         });
         links.forEach((b, i) => b.classList.toggle('is-active', i === cur));
       };
@@ -154,7 +163,7 @@ export default function CaseModal({ index, origin, onClose, onNavigate }: Props)
       if (e.key === 'ArrowRight') onNavigate((index + 1) % WORK.length);
       if (e.key === 'ArrowLeft') onNavigate((index - 1 + WORK.length) % WORK.length);
       if (e.key === 'Tab' && root.current) {
-        const f = root.current.querySelectorAll<HTMLElement>('button, a[href]');
+        const f = Array.from(root.current.querySelectorAll<HTMLElement>('button, a[href]')).filter(el => el.getClientRects().length && !el.hasAttribute('disabled'));
         const a = f[0];
         const z = f[f.length - 1];
         if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); }
@@ -168,7 +177,7 @@ export default function CaseModal({ index, origin, onClose, onNavigate }: Props)
   const jumpTo = (id: string) => {
     const sc = scroller.current!;
     const el = sc.querySelector('#' + id) as HTMLElement | null;
-    if (el) sc.scrollTo({ top: Math.max(0, el.offsetTop - 96), behavior: reduced ? 'auto' : 'smooth' });
+    if (el) sc.scrollTo({ top: Math.max(0, sc.scrollTop + el.getBoundingClientRect().top - sc.getBoundingClientRect().top - 112), behavior: reduced ? 'auto' : 'smooth' });
   };
 
   const next = WORK[(index + 1) % WORK.length];
@@ -181,7 +190,7 @@ export default function CaseModal({ index, origin, onClose, onNavigate }: Props)
         <div className="cm__chrome">
           <div className="cm__progress"><div className="cm__progress-fill" /></div>
           <span className="cm__crumb">
-            <Spark className="cm__crumb-spark" /> Harry Mian <em>· Case studies</em>
+            <Spark className="cm__crumb-spark" /> The SEO Works <em>· Published studies</em>
           </span>
           <div className="cm__chrome-right">
             <span className="cm__page">
@@ -202,19 +211,18 @@ export default function CaseModal({ index, origin, onClose, onNavigate }: Props)
         <div ref={scroller} className="cm__scroll" data-lenis-prevent>
           <header className="cm__hero">
             <div className="cm__hero-media">
-              <img className="cm__hero-img" src={work.image} alt={`Concept visual for ${work.title}`} />
+              <img className="cm__hero-img" src={work.image} alt={images.hero.alt || `${work.client} — source case-study image`} />
               <div className="cm__hero-shade" />
             </div>
             <div className="cm__hero-facts">
               {work.tags.map((t) => (
                 <span key={t} className="cm__fact">{t}</span>
               ))}
-              <span className="cm__fact cm__fact--status"><i /> Illustrative concept</span>
             </div>
             <div className="cm__hero-content">
               <p className="cm__eyebrow-row">
-                <span className="cm__badge">Concept {work.num}</span>
-                <span className="cm__eyebrow">{cs.eyebrow}</span>
+                <span className="cm__badge">Study {work.num}</span>
+                <span className="cm__eyebrow">{cs.industry}</span>
               </p>
               <h2 id="cm-title" className="cm__title" aria-label={work.title}>
                 {work.title.split(' ').map((w, i) => (
@@ -223,7 +231,7 @@ export default function CaseModal({ index, origin, onClose, onNavigate }: Props)
                   </span>
                 ))}
               </h2>
-              <p className="cm__hero-lede">{cs.summary}</p>
+              <p className="cm__hero-lede">{cs.client}</p>
             </div>
           </header>
 
@@ -242,39 +250,26 @@ export default function CaseModal({ index, origin, onClose, onNavigate }: Props)
                   </button>
                 ))}
               </nav>
-              <div className="cm__rail-card">
-                <p>Want this approach applied to your brand?</p>
-                <a href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Concept: ${work.title}`)}`} className="cm__rail-cta roll-trigger">
-                  <Roll>Email me</Roll>
-                </a>
-              </div>
-              <p className="cm__rail-status">
-                <i /> Concept work — methodology only, no outcomes claimed.
-              </p>
             </aside>
 
-            <main className="cm__main">
+            <div className="cm__main">
               <section className="cm__section cm__reveal-now" id="cm-overview">
                 <span className="cm__kicker">Overview</span>
+                <div className="cm__client-logo"><img src={images.logo.src} alt={`${work.client} logo as published in the original case study`} loading="lazy" /></div>
                 <p className="cm__summary">{work.blurb}</p>
               </section>
 
               <section className="cm__section cm__reveal" id="cm-challenge">
                 <div className="cm__label"><span>02</span> The challenge</div>
                 <p className="cm__lead">{cs.challenge}</p>
-                <div className="cm__label cm__label--sub"><span>↗</span> Objectives</div>
-                <div className="cm__objectives">
-                  {cs.goals.map((g, i) => (
-                    <div key={g} className="cm__obj">
-                      <span className="cm__obj-num">{String(i + 1).padStart(2, '0')}</span>
-                      <p>{g}</p>
-                    </div>
-                  ))}
-                </div>
+                <figure className="cm__editorial-figure">
+                  <a href={work.image} target="_blank" rel="noopener noreferrer" aria-label="Open original case-study image at full size"><img src={work.image} alt={images.hero.alt || `${work.client} case-study image`} loading="lazy" /></a>
+                  <figcaption>From the original case study <span>Image published by The SEO Works · Open for full size ↗</span></figcaption>
+                </figure>
               </section>
 
               <section className="cm__section cm__section--band cm__reveal" id="cm-approach">
-                <div className="cm__label cm__label--onband"><span>03</span> My approach</div>
+                <div className="cm__label cm__label--onband"><span>03</span> The SEO Works’ strategy</div>
                 <ol className="cm__approach">
                   {cs.approach.map((a, i) => (
                     <li key={a.title} className="cm__step">
@@ -288,47 +283,31 @@ export default function CaseModal({ index, origin, onClose, onNavigate }: Props)
               </section>
 
               <section className="cm__section cm__reveal" id="cm-outcomes">
-                <div className="cm__label"><span>04</span> Deliverables</div>
-                <ul className="cm__chips">
-                  {cs.deliverables.map((d) => <li key={d} className="cm__chip">{d}</li>)}
-                </ul>
-
-                <div className="cm__dark">
-                  <span className="cm__kicker cm__kicker--light">Signals to track — not reported results</span>
-                  <ul className="cm__metrics">
-                    {cs.measure.map((m) => (
-                      <li key={m} className="cm__metric"><Spark className="cm__metric-spark" />{m}</li>
-                    ))}
-                  </ul>
+                <div className="cm__label"><span>04</span> Reported results</div>
+                {images.gallery.length > 0 && <div className="cm__source-gallery">
+                  <div className="cm__gallery-intro"><h3>Inside the campaign.</h3><p>Original screenshots and reporting visuals published by The SEO Works. Select an image to inspect it at full size.</p></div>
+                  {images.gallery.map((image, i) => <figure className="cm__source-figure" key={image.src}>
+                    <a href={image.src} target="_blank" rel="noopener noreferrer" aria-label={`Open source screenshot ${i + 1} at full size`}><img src={image.src} alt={image.alt || `${work.client}: original campaign reporting screenshot ${i + 1}`} loading="lazy" /></a>
+                    <figcaption><span>{String(i + 1).padStart(2, '0')} / {image.alt || 'Campaign reporting — original source screenshot'}</span></figcaption>
+                  </figure>)}
+                </div>}
+                <div className="cm__result-grid">
+                  {work.metrics.map(metric => <div className="cm__result" key={metric.label}><strong>{metric.value}</strong><span>{metric.label}</span></div>)}
                 </div>
-
-                <div className="cm__label cm__label--sub"><span>05</span> Toolkit</div>
-                <ul className="cm__chips">
-                  {cs.stack.map((s) => <li key={s} className="cm__chip cm__chip--outline">{s}</li>)}
-                </ul>
-
-                <p className="cm__disclaimer">
-                  This conceptual case study illustrates my methodology. It does not represent a completed client engagement, and I’m not claiming any outcomes.
-                </p>
+                <p className="cm__source-note">{work.note}</p>
               </section>
-
-              <section className="cm__cta cm__reveal">
-                <span className="cm__kicker">Next step</span>
-                <p>Let’s make your brand the answer.</p>
-                <a href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Concept: ${work.title}`)}`} className="cm__cta-btn roll-trigger">
-                  <Roll>Start a conversation</Roll>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M7 17 17 7M8 7h9v9" /></svg>
-                </a>
-              </section>
+              <div className="cm__reveal">
+                <button className="cm__rail-cta" onClick={close}>Close case study</button>
+              </div>
 
               <button className="cm__next cm__reveal" onClick={() => onNavigate((index + 1) % WORK.length)}>
                 <img src={next.image} alt="" />
                 <span className="cm__next-shade" />
-                <span className="cm__next-label">Next concept · {next.num}</span>
+                <span className="cm__next-label">Next case study · {next.num}</span>
                 <span className="cm__next-title">{next.title}</span>
                 <span className="cm__next-arrow">→</span>
               </button>
-            </main>
+            </div>
           </div>
         </div>
       </div>

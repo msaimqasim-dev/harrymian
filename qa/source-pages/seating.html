@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="en-GB">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.5",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),this},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||!t.src||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e=window){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();
+</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='icon' href='https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/images/fav.png' type='image/x-icon'/>
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v28.8 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Taking 60% of AI Overviews for a Seating Manufacturer</title><link rel="preload" data-rocket-preload as="image" imagesrcset="https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating.jpg.avif 1280w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-300x200.jpg.avif 300w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-1024x682.jpg.avif 1024w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-768x512.jpg.avif 768w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-200x133.jpg.avif 200w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-525x350.jpg.avif 525w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-350x233.jpg.avif 350w" imagesizes="100vw" fetchpriority="high">
+	<meta name="description" content="- Taking 60% Share of Voice in AI Overviews for a Seating Manufacturer The SEO Works" />
+	<link rel="canonical" href="https://www.seoworks.co.uk/case-studies/share-of-voice-ai-overviews-for-seating-manufacturer/" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Taking 60% of AI Overviews for a Seating Manufacturer" />
+	<meta property="og:description" content="- Taking 60% Share of Voice in AI Overviews for a Seating Manufacturer The SEO Works" />
+	<meta property="og:url" content="https://www.seoworks.co.uk/case-studies/share-of-voice-ai-overviews-for-seating-manufacturer/" />
+	<meta property="og:site_name" content="The SEO Works" />
+	<meta property="article:publisher" content="https://www.facebook.com/SEOWorksUK/" />
+	<meta property="article:modified_time" content="2026-06-24T13:13:14+00:00" />
+	<meta property="og:image" content="https://www.seoworks.co.uk/wp-content/uploads/2026/06/auditoria-services-logo-2.png" />
+	<meta property="og:image:width" content="500" />
+	<meta property="og:image:height" content="153" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@seoworksuk" />
+	<meta name="twitter:label1" content="Estimated reading time" />
+	<meta name="twitter:data1" content="1 minute" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.seoworks.co.uk\/case-studies\/share-of-voice-ai-overviews-for-seating-manufacturer\/","url":"https:\/\/www.seoworks.co.uk\/case-studies\/share-of-voice-ai-overviews-for-seating-manufacturer\/","name":"Taking 60% of AI Overviews for a Seating Manufacturer","isPartOf":{"@id":"https:\/\/www.seoworks.co.uk\/#website"},"primaryImageOfPage":{"@id":"https:\/\/www.seoworks.co.uk\/case-studies\/share-of-voice-ai-overviews-for-seating-manufacturer\/#primaryimage"},"image":{"@id":"https:\/\/www.seoworks.co.uk\/case-studies\/share-of-voice-ai-overviews-for-seating-manufacturer\/#primaryimage"},"thumbnailUrl":"https:\/\/www.seoworks.co.uk\/wp-content\/uploads\/2026\/06\/auditoria-services-logo-2.png","datePublished":"2026-06-22T16:09:44+00:00","dateModified":"2026-06-24T13:13:14+00:00","description":"- Taking 60% Share of Voice in AI Overviews for a Seating Manufacturer The SEO Works","breadcrumb":{"@id":"https:\/\/www.seoworks.co.uk\/case-studies\/share-of-voice-ai-overviews-for-seating-manufacturer\/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.seoworks.co.uk\/case-studies\/share-of-voice-ai-overviews-for-seating-manufacturer\/"]}]},{"@type":"ImageObject","inLanguage":"en-GB","@id":"https:\/\/www.seoworks.co.uk\/case-studies\/share-of-voice-ai-overviews-for-seating-manufacturer\/#primaryimage","url":"https:\/\/www.seoworks.co.uk\/wp-content\/uploads\/2026\/06\/auditoria-services-logo-2.png","contentUrl":"https:\/\/www.seoworks.co.uk\/wp-content\/uploads\/2026\/06\/auditoria-services-logo-2.png","width":500,"height":153},{"@type":"BreadcrumbList","@id":"https:\/\/www.seoworks.co.uk\/case-studies\/share-of-voice-ai-overviews-for-seating-manufacturer\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/www.seoworks.co.uk\/"},{"@type":"ListItem","position":2,"name":"Taking 60% Share of Voice in AI Overviews for a Seating Manufacturer"}]},{"@type":"WebSite","@id":"https:\/\/www.seoworks.co.uk\/#website","url":"https:\/\/www.seoworks.co.uk\/","name":"The SEO Works","description":"Integrated organic search (SEO&amp;GEO), paid media and web experts. Established 2009 with hundreds of proven growth case studies and results.","publisher":{"@id":"https:\/\/www.seoworks.co.uk\/#organization"},"inLanguage":"en-GB"},{"@type":"Organization","@id":"https:\/\/www.seoworks.co.uk\/#organization","name":"The SEO Works","url":"https:\/\/www.seoworks.co.uk\/","logo":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https:\/\/www.seoworks.co.uk\/#\/schema\/logo\/image\/","url":"https:\/\/www.seoworks.co.uk\/wp-content\/uploads\/2023\/09\/seo_square.png","contentUrl":"https:\/\/www.seoworks.co.uk\/wp-content\/uploads\/2023\/09\/seo_square.png","width":256,"height":256,"caption":"The SEO Works"},"image":{"@id":"https:\/\/www.seoworks.co.uk\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.facebook.com\/SEOWorksUK\/","https:\/\/x.com\/seoworksuk","https:\/\/www.linkedin.com\/company\/the-seo-works\/","https:\/\/instagram.com\/seoworksuk"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+
+<link rel="alternate" type="application/rss+xml" title="The SEO Works &raquo; Feed" href="https://www.seoworks.co.uk/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The SEO Works &raquo; Comments Feed" href="https://www.seoworks.co.uk/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.seoworks.co.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.seoworks.co.uk%2Fcase-studies%2Fshare-of-voice-ai-overviews-for-seating-manufacturer%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.seoworks.co.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.seoworks.co.uk%2Fcase-studies%2Fshare-of-voice-ai-overviews-for-seating-manufacturer%2F&#038;format=xml" />
+
+<!-- AI Discovery Files (v2.2.2) -->
+<link rel="alternate" type="text/plain" href="https://www.seoworks.co.uk/llms.txt" title="AI Discovery (llms.txt)">
+<link rel="alternate" type="text/html" href="https://www.seoworks.co.uk/llms.html" title="AI Discovery, HTML (llms.html)">
+<link rel="alternate" type="text/plain" href="https://www.seoworks.co.uk/ai.txt" title="AI Usage Policy (ai.txt)">
+<link rel="alternate" type="application/json" href="https://www.seoworks.co.uk/ai.json" title="AI Permissions (ai.json)">
+<link rel="alternate" type="application/json" href="https://www.seoworks.co.uk/identity.json" title="Business Identity (identity.json)">
+<link rel="alternate" type="text/plain" href="https://www.seoworks.co.uk/brand.txt" title="Brand Terminology (brand.txt)">
+<link rel="alternate" type="text/plain" href="https://www.seoworks.co.uk/faq-ai.txt" title="FAQs for AI (faq-ai.txt)">
+<link rel="alternate" type="text/plain" href="https://www.seoworks.co.uk/developer-ai.txt" title="Developer Context (developer-ai.txt)">
+<link rel="alternate" type="text/plain" href="https://www.seoworks.co.uk/robots-ai.txt" title="AI Crawler Access (robots-ai.txt)">
+<!-- /AI Discovery Files -->
+
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://www.seoworks.co.uk/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--nasty-green: #85bd41;--wp--preset--color--charcoal-grey: #3e4042;--wp--preset--color--dark-charcoal: #323232;--wp--preset--color--pure-white: #FFFFFF;--wp--preset--color--light-grey: #F5F5F5;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.732), 20px);--wp--preset--font-size--large: clamp(22.041px, 1.378rem + ((1vw - 3.2px) * 1.702), 36px);--wp--preset--font-size--x-large: clamp(25.014px, 1.563rem + ((1vw - 3.2px) * 2.071), 42px);--wp--preset--font-family--league-spartan: "League Spartan", sans-serif;--wp--preset--font-family--outfit: "Outfit", sans-serif;--wp--preset--font-family--open-sans: "Open Sans", sans-serif;--wp--preset--font-family--montserrat: "Montserrat", sans-serif;--wp--preset--font-family--bitter: 'Bitter', serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--spacing--4025: clamp(1.5625rem, 0.0625rem + 3.125vw, 2.5rem);--wp--preset--spacing--5842: clamp(2.625rem, 1.025rem + 3.3333vw, 3.625rem);--wp--preset--spacing--8355: clamp(3.4375rem, 0.6375rem + 5.8333vw, 5.1875rem);--wp--preset--spacing--10248: clamp(3rem, -2.4rem + 11.25vw, 6.375rem);--wp--preset--spacing--10453: clamp(3.3125rem, 0.6125rem + 5.625vw, 5rem);--wp--preset--spacing--12580: clamp(5rem, 1rem + 8.3333vw, 7.5rem);--wp--preset--spacing--127105: clamp(6.5625rem, 4.3625rem + 4.5833vw, 7.9375rem);--wp--preset--spacing--13694: clamp(6.5625rem, 5.0625rem + 3.125vw, 7.5rem);--wp--preset--spacing--14280: clamp(5rem, 1rem + 8.3333vw, 7.5rem);--wp--preset--spacing--142100: clamp(6.25rem, 2.05rem + 8.75vw, 8.875rem);--wp--preset--spacing--15872: clamp(4.5rem, -0.3rem + 10vw, 7.5rem);--wp--preset--spacing--16278: clamp(4.875rem, 0.675rem + 8.75vw, 7.5rem);--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:root { --wp--style--global--content-size: 800px;--wp--style--global--wide-size: 1140px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: var(--wp--preset--color--nasty-green);border-radius: 0;border-width: 0;color: var(--wp--preset--color--pure-white);font-family: league_spartanbold;font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.244), 16px);font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: normal;padding-top: 11px;padding-right: 30px;padding-bottom: 11px;padding-left: 30px;text-decoration: none;text-transform: inherit;}:root :where(.wp-element-button:hover, .wp-block-button__link:hover){background-color: var(--wp--preset--color--charcoal-grey);}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-nasty-green-color{color: var(--wp--preset--color--nasty-green) !important;}.has-charcoal-grey-color{color: var(--wp--preset--color--charcoal-grey) !important;}.has-dark-charcoal-color{color: var(--wp--preset--color--dark-charcoal) !important;}.has-pure-white-color{color: var(--wp--preset--color--pure-white) !important;}.has-light-grey-color{color: var(--wp--preset--color--light-grey) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-nasty-green-background-color{background-color: var(--wp--preset--color--nasty-green) !important;}.has-charcoal-grey-background-color{background-color: var(--wp--preset--color--charcoal-grey) !important;}.has-dark-charcoal-background-color{background-color: var(--wp--preset--color--dark-charcoal) !important;}.has-pure-white-background-color{background-color: var(--wp--preset--color--pure-white) !important;}.has-light-grey-background-color{background-color: var(--wp--preset--color--light-grey) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-nasty-green-border-color{border-color: var(--wp--preset--color--nasty-green) !important;}.has-charcoal-grey-border-color{border-color: var(--wp--preset--color--charcoal-grey) !important;}.has-dark-charcoal-border-color{border-color: var(--wp--preset--color--dark-charcoal) !important;}.has-pure-white-border-color{border-color: var(--wp--preset--color--pure-white) !important;}.has-light-grey-border-color{border-color: var(--wp--preset--color--light-grey) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-league-spartan-font-family{font-family: var(--wp--preset--font-family--league-spartan) !important;}.has-outfit-font-family{font-family: var(--wp--preset--font-family--outfit) !important;}.has-open-sans-font-family{font-family: var(--wp--preset--font-family--open-sans) !important;}.has-montserrat-font-family{font-family: var(--wp--preset--font-family--montserrat) !important;}.has-bitter-font-family{font-family: var(--wp--preset--font-family--bitter) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link data-minify="1" rel='stylesheet' id='categories-images-styles-css' href='https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/plugins/categories-images/assets/css/zci-styles.css?ver=1792412248' media='all' />
+<link data-minify="1" rel='stylesheet' id='seoworks-ai-summarise-style-frontend-css' href='https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/plugins/seoworks-blocks/build/blocks/ai_summarise/style-index.css?ver=1792412248' media='all' />
+<link data-minify="1" rel='stylesheet' id='extend-blocks-buttons-css' href='https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/plugins/seoworks-blocks/build/block-extensions/buttons/style-index.css?ver=1792412248' media='all' />
+<link data-minify="1" rel='stylesheet' id='extend-blocks-column-css' href='https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/plugins/seoworks-blocks/build/block-extensions/column/style-index.css?ver=1792412248' media='all' />
+<link data-minify="1" rel='stylesheet' id='extend-blocks-columns-css' href='https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/plugins/seoworks-blocks/build/block-extensions/columns/style-index.css?ver=1792412248' media='all' />
+<link data-minify="1" rel='stylesheet' id='extend-blocks-cover-css' href='https://www.seoworks.co.uk/wp-content/cache/background-css/1/www.seoworks.co.uk/wp-content/cache/min/1/wp-content/plugins/seoworks-blocks/build/block-extensions/cover/style-index.css?ver=1792412248&wpr_t=1793980638' media='all' />
+<link data-minify="1" rel='stylesheet' id='extend-blocks-grid-css' href='https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/plugins/seoworks-blocks/build/block-extensions/grid/style-index.css?ver=1792412248' media='all' />
+<link data-minify="1" rel='stylesheet' id='extend-blocks-group-css' href='https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/plugins/seoworks-blocks/build/block-extensions/group/style-index.css?ver=1792412248' media='all' />
+<link data-minify="1" rel='stylesheet' id='extend-blocks-images-css' href='https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/plugins/seoworks-blocks/build/block-extensions/images/style-index.css?ver=1792412248' media='all' />
+<link data-minify="1" rel='stylesheet' id='extend-blocks-list-css' href='https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/plugins/seoworks-blocks/build/block-extensions/list/style-index.css?ver=1792412248' media='all' />
+<link data-minify="1" rel='stylesheet' id='extend-blocks-responsive-css' href='https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/plugins/seoworks-blocks/build/block-extensions/responsive/style-index.css?ver=1792412248' media='all' />
+<link data-minify="1" rel='stylesheet' id='page-css-css' href='https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/themes/seoworks/assets/build/page.css?ver=1792412248' media='all' />
+<link data-minify="1" rel='stylesheet' id='seoworks-temp-style-css' href='https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/themes/seoworks/dist/service-style.css?ver=1792412248' media='all' />
+<link data-minify="1" rel='stylesheet' id='case-studies-css-css' href='https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/themes/seoworks/assets/build/casestudy.css?ver=1792412286' media='all' />
+<link data-minify="1" rel='stylesheet' id='swiper-css-css' href='https://www.seoworks.co.uk/wp-content/cache/min/1/npm/swiper@10/swiper-bundle.min.css?ver=1792412286' media='' />
+<script type="text/rocketlazyloadscript" id="seoworks-ai-summarise-script-frontend-js" data-rocket-src="https://www.seoworks.co.uk/wp-content/plugins/seoworks-blocks/build/blocks/ai_summarise/frontend.js?ver=1768921988" data-rocket-defer defer></script>
+<link rel="https://api.w.org/" href="https://www.seoworks.co.uk/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.seoworks.co.uk/wp-json/wp/v2/case-studies/21675" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.seoworks.co.uk/xmlrpc.php?rsd" />
+    
+    <script type="text/rocketlazyloadscript" data-rocket-type="text/javascript">
+        var ajaxurl = 'https://www.seoworks.co.uk/wp-admin/admin-ajax.php';
+    </script>
+<style type="text/css">.saboxplugin-wrap{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;border:1px solid #eee;width:100%;clear:both;display:block;overflow:hidden;word-wrap:break-word;position:relative}.saboxplugin-wrap .saboxplugin-gravatar{float:left;padding:0 20px 20px 20px}.saboxplugin-wrap .saboxplugin-gravatar img{max-width:100px;height:auto;border-radius:0;}.saboxplugin-wrap .saboxplugin-authorname{font-size:18px;line-height:1;margin:20px 0 0 20px;display:block}.saboxplugin-wrap .saboxplugin-authorname a{text-decoration:none}.saboxplugin-wrap .saboxplugin-authorname a:focus{outline:0}.saboxplugin-wrap .saboxplugin-desc{display:block;margin:5px 20px}.saboxplugin-wrap .saboxplugin-desc a{text-decoration:underline}.saboxplugin-wrap .saboxplugin-desc p{margin:5px 0 12px}.saboxplugin-wrap .saboxplugin-web{margin:0 20px 15px;text-align:left}.saboxplugin-wrap .sab-web-position{text-align:right}.saboxplugin-wrap .saboxplugin-web a{color:#ccc;text-decoration:none}.saboxplugin-wrap .saboxplugin-socials{position:relative;display:block;background:#fcfcfc;padding:5px;border-top:1px solid #eee}.saboxplugin-wrap .saboxplugin-socials a svg{width:20px;height:20px}.saboxplugin-wrap .saboxplugin-socials a svg .st2{fill:#fff; transform-origin:center center;}.saboxplugin-wrap .saboxplugin-socials a svg .st1{fill:rgba(0,0,0,.3)}.saboxplugin-wrap .saboxplugin-socials a:hover{opacity:.8;-webkit-transition:opacity .4s;-moz-transition:opacity .4s;-o-transition:opacity .4s;transition:opacity .4s;box-shadow:none!important;-webkit-box-shadow:none!important}.saboxplugin-wrap .saboxplugin-socials .saboxplugin-icon-color{box-shadow:none;padding:0;border:0;-webkit-transition:opacity .4s;-moz-transition:opacity .4s;-o-transition:opacity .4s;transition:opacity .4s;display:inline-block;color:#fff;font-size:0;text-decoration:inherit;margin:5px;-webkit-border-radius:0;-moz-border-radius:0;-ms-border-radius:0;-o-border-radius:0;border-radius:0;overflow:hidden}.saboxplugin-wrap .saboxplugin-socials .saboxplugin-icon-grey{text-decoration:inherit;box-shadow:none;position:relative;display:-moz-inline-stack;display:inline-block;vertical-align:middle;zoom:1;margin:10px 5px;color:#444;fill:#444}.clearfix:after,.clearfix:before{content:' ';display:table;line-height:0;clear:both}.ie7 .clearfix{zoom:1}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-twitch{border-color:#38245c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-behance{border-color:#003eb0}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-deviantart{border-color:#036824}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-digg{border-color:#00327c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-dribbble{border-color:#ba1655}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-facebook{border-color:#1e2e4f}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-flickr{border-color:#003576}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-github{border-color:#264874}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-google{border-color:#0b51c5}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-html5{border-color:#902e13}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-instagram{border-color:#1630aa}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-linkedin{border-color:#00344f}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-pinterest{border-color:#5b040e}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-reddit{border-color:#992900}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-rss{border-color:#a43b0a}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-sharethis{border-color:#5d8420}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-soundcloud{border-color:#995200}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-spotify{border-color:#0f612c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-stackoverflow{border-color:#a95009}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-steam{border-color:#006388}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-user_email{border-color:#b84e05}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-tumblr{border-color:#10151b}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-twitter{border-color:#0967a0}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-vimeo{border-color:#0d7091}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-windows{border-color:#003f71}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-whatsapp{border-color:#003f71}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-wordpress{border-color:#0f3647}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-yahoo{border-color:#14002d}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-youtube{border-color:#900}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-xing{border-color:#000202}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-mixcloud{border-color:#2475a0}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-vk{border-color:#243549}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-medium{border-color:#00452c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-quora{border-color:#420e00}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-meetup{border-color:#9b181c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-goodreads{border-color:#000}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-snapchat{border-color:#999700}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-500px{border-color:#00557f}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-mastodont{border-color:#185886}.sabox-plus-item{margin-bottom:20px}@media screen and (max-width:480px){.saboxplugin-wrap{text-align:center}.saboxplugin-wrap .saboxplugin-gravatar{float:none;padding:20px 0;text-align:center;margin:0 auto;display:block}.saboxplugin-wrap .saboxplugin-gravatar img{float:none;display:inline-block;display:-moz-inline-stack;vertical-align:middle;zoom:1}.saboxplugin-wrap .saboxplugin-desc{margin:0 10px 20px;text-align:center}.saboxplugin-wrap .saboxplugin-authorname{text-align:center;margin:10px 0 20px}}body .saboxplugin-authorname a,body .saboxplugin-authorname a:hover{box-shadow:none;-webkit-box-shadow:none}a.sab-profile-edit{font-size:16px!important;line-height:1!important}.sab-edit-settings a,a.sab-profile-edit{color:#0073aa!important;box-shadow:none!important;-webkit-box-shadow:none!important}.sab-edit-settings{margin-right:15px;position:absolute;right:0;z-index:2;bottom:10px;line-height:20px}.sab-edit-settings i{margin-left:5px}.saboxplugin-socials{line-height:1!important}.rtl .saboxplugin-wrap .saboxplugin-gravatar{float:right}.rtl .saboxplugin-wrap .saboxplugin-authorname{display:flex;align-items:center}.rtl .saboxplugin-wrap .saboxplugin-authorname .sab-profile-edit{margin-right:10px}.rtl .sab-edit-settings{right:auto;left:0}img.sab-custom-avatar{max-width:75px;}.saboxplugin-wrap .saboxplugin-socials .saboxplugin-icon-color {-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%;border-radius:50%;}.saboxplugin-wrap .saboxplugin-socials .saboxplugin-icon-color .st1 {display: none;}.saboxplugin-wrap {margin-top:0px; margin-bottom:0px; padding: 0px 0px }.saboxplugin-wrap .saboxplugin-authorname {font-size:18px; line-height:25px;}.saboxplugin-wrap .saboxplugin-desc p, .saboxplugin-wrap .saboxplugin-desc {font-size:14px !important; line-height:21px !important;}.saboxplugin-wrap .saboxplugin-web {font-size:14px;}.saboxplugin-wrap .saboxplugin-socials a svg {width:36px;height:36px;}</style><style class="wp-fonts-local">
+@font-face{font-family:"League Spartan";font-style:normal;font-weight:400;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/League_Spartan/leaguespartan-regular.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"League Spartan";font-style:normal;font-weight:100;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/League_Spartan/league-spartan-100.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"League Spartan";font-style:normal;font-weight:200;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/League_Spartan/league-spartan-200.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"League Spartan";font-style:normal;font-weight:500;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/League_Spartan/league-spartan-500.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"League Spartan";font-style:normal;font-weight:600;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/League_Spartan/league-spartan-600.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"League Spartan";font-style:normal;font-weight:700;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/League_Spartan/league-spartan-700.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Outfit;font-style:normal;font-weight:400;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/Outfit/outfit-regular.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Outfit;font-style:normal;font-weight:100;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/Outfit/outfit-100.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Outfit;font-style:normal;font-weight:200;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/Outfit/outfit-200.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Outfit;font-style:normal;font-weight:500;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/Outfit/outfit-500.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Outfit;font-style:normal;font-weight:600;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/Outfit/outfit-600.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Outfit;font-style:normal;font-weight:700;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/Outfit/outfit-700.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"Open Sans";font-style:normal;font-weight:400;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/Open_Sans/opensans-regular-webfont.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/montserrat-v25-latin/montserrat-v25-latin-regular.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Bitter;font-style:regular;font-weight:400;font-display:swap;src:url('https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/fonts/bitter-v32-latin/bitter-v32-latin-regular.woff2') format('woff2');font-stretch:normal;}
+</style>
+<link rel="icon" href="https://www.seoworks.co.uk/wp-content/uploads/2026/07/cropped-fav-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.seoworks.co.uk/wp-content/uploads/2026/07/cropped-fav-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.seoworks.co.uk/wp-content/uploads/2026/07/cropped-fav-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.seoworks.co.uk/wp-content/uploads/2026/07/cropped-fav-270x270.png" />
+<style id="wp-custom-css">
+.cp_id_1f98f .popup-title,
+.cp_id_e10b9 .popup-title{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "league_spartanbold";
+    color: #303030;
+	letter-spacing:3px;
+}
+
+.cp_id_1f98f .popup-title::after,
+.cp_id_e10b9 .popup-title::after {
+    content: '';
+    width: 80px;
+    height: 7px;
+    background: #85BD3C;
+    display: block;
+    margin: 5px 0;
+}
+
+.cp_id_1f98f .popup-description {
+    font-size: 22px;
+    color: black;
+    line-height: 9px;
+    font-family: "open_sansregular";
+		font-weight: bold;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.cp_id_1f98f .popup-subdescription {
+		display: block;
+		margin-top: 10px;
+    font-size: 22px;
+    color: #85BD3C;
+    font-weight: bold;
+    font-family: "open_sansregular";
+}
+
+.cp_id_1f98f .popup-btn {
+    font-family: "open_sansregular";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.page-template-template-aboutus .section-background__color .shortcode-casestudies .card-body .card-text p {
+	color: #303030;
+}
+
+h2#slide-7-layer-5 {
+    font-family: "league_spartanbold" !important;
+}
+
+.ssba-share-text-prev,
+.single-case-studies #ssba-classic-2,
+.case-studies-template-default .ssba-classic-2 {
+    display: none!important;
+}
+
+.button-green {
+	display: inline-block;
+	background: #85BD3C;
+	color: #fff!important;
+	padding: 10px 30px;
+}
+@media only screen and (max-width: 600px) {
+	.button-green {
+		display:inline-block;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+mark.has-nasty-green-color{
+	padding: 0
+}
+
+#SeersCMPBannerPreferenceButton{
+	background:#FFF !important;
+}
+
+.posted-on .updated {
+	display: none;
+}
+
+</style>
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">:after{--wpr-bg-73e3f147-981f-494c-bb23-d3b04dd494d1: url('https://grainy-gradients.vercel.app/noise.svg');}:after{--wpr-bg-21bce1c1-270d-4823-9330-eaf955be450a: url('https://grainy-gradients.vercel.app/noise.svg');}</style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = [{"selector":"body","style":":after{--wpr-bg-73e3f147-981f-494c-bb23-d3b04dd494d1: url('https:\/\/grainy-gradients.vercel.app\/noise.svg');}","hash":"73e3f147-981f-494c-bb23-d3b04dd494d1","url":"https:\/\/grainy-gradients.vercel.app\/noise.svg"},{"selector":"body","style":":after{--wpr-bg-21bce1c1-270d-4823-9330-eaf955be450a: url('https:\/\/grainy-gradients.vercel.app\/noise.svg');}","hash":"21bce1c1-270d-4823-9330-eaf955be450a","url":"https:\/\/grainy-gradients.vercel.app\/noise.svg"}]; const rocket_excluded_pairs = [];</script><meta name="generator" content="WP Rocket 3.24" data-wpr-features="wpr_lazyload_css_bg_img wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_lazyload_iframes wpr_automatic_lazy_rendering wpr_oci wpr_image_dimensions wpr_minify_css wpr_cdn wpr_preload_links wpr_desktop" /></head>
+<body class="wp-singular case-studies-template-default single single-case-studies postid-21675 wp-theme-seoworks">
+<div  id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	<header  id="header">
+  <nav class="navbar navbar-expand-lg scrolling-navbar nav-bg">
+
+    <div class="container">
+      
+      <div class="navbar-header">
+        <a class="navbar-brand" href="https://www.seoworks.co.uk">
+  				<img width="300" height="76" src="https://www.seoworks.co.uk/wp-content/themes/seoworks/assets/logos/Seoworks-Logo-Dark.svg" alt="Seo Works Logo" style="width:250px;height:64px;">
+  			</a>
+
+        <label for="hamburger-checkbox" class="navbar-toggler">
+          <svg viewBox="0 0 10 10" width="20" height="20">
+            <path stroke="white" d="M0,1 10,1 M0,5 10,5 M0,9 10,9" />
+          </svg>
+          <input type="checkbox" id="hamburger-checkbox">
+        </label>
+        
+        <ul class="main-menu">				<li class="nav-item-list">
+					<div class="nav-row">
+												<a class="nav-link" href="https://www.seoworks.co.uk/services/">
+							Services						</a>
+												<label for="grandchild-navbar-toggler-0" class="child-navbar-toggler">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#85BD3C" d="M12 21l-12-18h24z"/></svg>
+							<input type="checkbox" id="grandchild-navbar-toggler-0">
+						</label>
+					</div>
+					<div class="wrapper">
+						<ul class="expandable navbar-dropdown-menu child-menu" aria-haspopup="true" aria-expanded="false">
+													<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="/seo-services/ai-seo-services/">
+										AI Search									</a>									<label for="grandchild-navbar-toggler-0-0" class="grandchild-navbar-toggler">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#85BD3C" d="M12 21l-12-18h24z"/></svg>
+										<input type="checkbox" id="grandchild-navbar-toggler-0-0">
+									</label>
+									</div>
+									<div class="wrapper">
+										<ul class="exandable navbar-dropdown-menu grandchild-menu" aria-haspopup="true" aria-expanded="false">
+																					<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/ppc-services/chatgpt-advertising-agency/">
+													ChatGPT Advertising												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/seo-services/generative-engine-optimisation-geo/">
+													GEO Services												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/seo-services/answer-engine-optimisation-aeo/">
+													AEO Services												</a>
+											</li>										</ul>
+									</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/seo-services/">
+										SEO Services									</a>									<label for="grandchild-navbar-toggler-0-1" class="grandchild-navbar-toggler">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#85BD3C" d="M12 21l-12-18h24z"/></svg>
+										<input type="checkbox" id="grandchild-navbar-toggler-0-1">
+									</label>
+									</div>
+									<div class="wrapper">
+										<ul class="exandable navbar-dropdown-menu grandchild-menu" aria-haspopup="true" aria-expanded="false">
+																					<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/seo-services/ai-seo-services/">
+													AI SEO												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/seo-services/organic-seo/">
+													Organic SEO												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="/services/digital-pr-agency/">
+													Digital PR												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/content-marketing-content-strategy/">
+													Content Marketing												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/seo-services/technical-seo-agency/">
+													Technical SEO												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/local-seo/">
+													Local SEO												</a>
+											</li>										</ul>
+									</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/ppc-services/">
+										PPC Services									</a>									<label for="grandchild-navbar-toggler-0-2" class="grandchild-navbar-toggler">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#85BD3C" d="M12 21l-12-18h24z"/></svg>
+										<input type="checkbox" id="grandchild-navbar-toggler-0-2">
+									</label>
+									</div>
+									<div class="wrapper">
+										<ul class="exandable navbar-dropdown-menu grandchild-menu" aria-haspopup="true" aria-expanded="false">
+																					<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/ppc-services/google-ads-management/">
+													Google Ads Management												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/ppc-services/google-shopping-management/">
+													Google Shopping Management												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/ppc-services/amazon-ppc-management/">
+													Amazon PPC Management												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/ppc-services/ppc-consultancy/">
+													PPC Consultancy												</a>
+											</li>										</ul>
+									</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/paid-social-media-services/">
+										Paid Social									</a>									<label for="grandchild-navbar-toggler-0-3" class="grandchild-navbar-toggler">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#85BD3C" d="M12 21l-12-18h24z"/></svg>
+										<input type="checkbox" id="grandchild-navbar-toggler-0-3">
+									</label>
+									</div>
+									<div class="wrapper">
+										<ul class="exandable navbar-dropdown-menu grandchild-menu" aria-haspopup="true" aria-expanded="false">
+																					<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/paid-social-media-services/facebook-advertising/">
+													Facebook Advertising												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/paid-social-media-services/linkedin-advertising/">
+													LinkedIn Advertising												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/paid-social-media-services/youtube-advertising-agency/">
+													YouTube Advertising												</a>
+											</li>										</ul>
+									</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/programmatic-advertising-services/">
+										Programmatic									</a>									<label for="grandchild-navbar-toggler-0-4" class="grandchild-navbar-toggler">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#85BD3C" d="M12 21l-12-18h24z"/></svg>
+										<input type="checkbox" id="grandchild-navbar-toggler-0-4">
+									</label>
+									</div>
+									<div class="wrapper">
+										<ul class="exandable navbar-dropdown-menu grandchild-menu" aria-haspopup="true" aria-expanded="false">
+																					<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/programmatic-advertising-services/programmatic-display-advertising/">
+													Display Advertising												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/programmatic-advertising-services/ctv-advertising/">
+													Connected TV												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/programmatic-advertising-services/out-of-home-advertising/">
+													Out of Home Advertising												</a>
+											</li>										</ul>
+									</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/website-development-design/">
+										Design &amp; Development									</a>									<label for="grandchild-navbar-toggler-0-5" class="grandchild-navbar-toggler">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#85BD3C" d="M12 21l-12-18h24z"/></svg>
+										<input type="checkbox" id="grandchild-navbar-toggler-0-5">
+									</label>
+									</div>
+									<div class="wrapper">
+										<ul class="exandable navbar-dropdown-menu grandchild-menu" aria-haspopup="true" aria-expanded="false">
+																					<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/website-development-design/design-services/">
+													Web Design Services												</a>
+											</li>											<li class="nav-item-list">
+												<a class="nav-link" href="https://www.seoworks.co.uk/website-development-design/web-development-services/">
+													Web Development Services												</a>
+											</li>										</ul>
+									</div>							</li>						</ul>
+					</div>
+				</li>				<li class="nav-item-list">
+					<div class="nav-row">
+												<a class="nav-link" href="/about-seoworks/">
+							About Us						</a>
+												<label for="grandchild-navbar-toggler-28" class="child-navbar-toggler">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#85BD3C" d="M12 21l-12-18h24z"/></svg>
+							<input type="checkbox" id="grandchild-navbar-toggler-28">
+						</label>
+					</div>
+					<div class="wrapper">
+						<ul class="expandable navbar-dropdown-menu child-menu" aria-haspopup="true" aria-expanded="false">
+													<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="/culture/">
+										Careers									</a>								</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/testimonials/">
+										Testimonials									</a>								</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/about-seoworks/our-process/">
+										Our Process									</a>								</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/about-seoworks/our-approach-to-ai/">
+										Our Approach to AI									</a>								</div>							</li>						</ul>
+					</div>
+				</li>				<li class="nav-item-list">
+					<div class="nav-row">
+												<a class="nav-link" href="/case-studies/">
+							Case Studies						</a>
+												<label for="grandchild-navbar-toggler-33" class="child-navbar-toggler">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#85BD3C" d="M12 21l-12-18h24z"/></svg>
+							<input type="checkbox" id="grandchild-navbar-toggler-33">
+						</label>
+					</div>
+					<div class="wrapper">
+						<ul class="expandable navbar-dropdown-menu child-menu" aria-haspopup="true" aria-expanded="false">
+													<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/case-studies/?industry=b2b">
+										B2B									</a>								</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/case-studies/?industry=b2c">
+										B2C									</a>								</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/case-studies/?industry=ecommerce">
+										Ecommerce									</a>								</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/case-studies/?industry=software">
+										Software									</a>								</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/case-studies/?industry=healthcare">
+										Healthcare									</a>								</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/case-studies/?industry=education">
+										Education									</a>								</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/case-studies/?industry=finance">
+										Finance									</a>								</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/case-studies/?industry=homeware">
+										Homeware									</a>								</div>							</li>						</ul>
+					</div>
+				</li>				<li class="navbar-item ">
+					<a class="nav-link" href="/awards/">
+						Awards					</a>
+				</li>
+							<li class="nav-item-list">
+					<div class="nav-row">
+												<p class="nav-link">
+							Resources						</p>
+												<label for="grandchild-navbar-toggler-43" class="child-navbar-toggler">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#85BD3C" d="M12 21l-12-18h24z"/></svg>
+							<input type="checkbox" id="grandchild-navbar-toggler-43">
+						</label>
+					</div>
+					<div class="wrapper">
+						<ul class="expandable navbar-dropdown-menu child-menu" aria-haspopup="true" aria-expanded="false">
+													<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="/blog/">
+										Blog									</a>								</div>							</li>							<li class="nav-item-list child-list">
+								<div class="nav-row">
+									<a class="nav-bar-dropdown-item" href="https://www.seoworks.co.uk/downloads/">
+										Free Digital Marketing Downloads									</a>								</div>							</li>						</ul>
+					</div>
+				</li>				<li class="navbar-item ">
+					<a class="nav-link" href="https://www.seoworks.co.uk/contact-us/">
+						Contact Us					</a>
+				</li>
+							<li class="navbar-item  last-item pulse highlight center-item">
+					<a class="nav-link" href="https://www.seoworks.co.uk/request-a-free-seo-analysis/">
+						FREE website review					</a>
+				</li>
+			</ul> 
+        
+      </div>
+    </div>
+
+  </nav>
+</header>
+
+
+	<div  id="content" class="site-content">
+<section  class="seoworks-block-case-study-cover">
+          <picture class="case-study-cover-image" decoding="async" fetchpriority="high">
+<source type="image/avif" srcset="https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating.jpg.avif 1280w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-300x200.jpg.avif 300w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-1024x682.jpg.avif 1024w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-768x512.jpg.avif 768w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-200x133.jpg.avif 200w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-525x350.jpg.avif 525w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-350x233.jpg.avif 350w" sizes="100vw"/>
+<img data-no-lazy="" width="1280" height="853" src="https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating.jpg" alt="Taking 60% Share of Voice in AI Overviews for a Seating Manufacturer" sizes="100vw" decoding="async" fetchpriority="high" srcset="https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating.jpg 1280w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-300x200.jpg 300w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-1024x682.jpg 1024w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-768x512.jpg 768w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-200x133.jpg 200w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-525x350.jpg 525w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/seating-350x233.jpg 350w"/>
+</picture>
+        <div class="overlay"></div>
+    <svg class="cog" xmlns="http://www.w3.org/2000/svg" width="325" height="325" viewBox="0 0 325 325" fill="none">
+      <path d="M221.499 0.235042C278.963 0.235044 325 0 325 0L325 43.0576L292.75 43.0576C291.273 62.9839 287.599 82.6881 281.796 101.815L311.59 113.52L296.15 152.911L265.978 141.253C255.901 161.985 243.207 181.351 228.204 198.883L250.868 221.164L220.979 250.965L198.173 228.261C180.92 242.924 161.884 255.369 141.512 265.302L153.505 295.151L114.22 310.851L102.557 281.566C82.8673 287.571 62.5622 291.356 42.0238 292.848L42.0238 325L0 325L4.04776e-06 232.398C122.664 232.061 221.924 132.973 221.924 10.8584C221.924 7.37997 221.829 3.90148 221.64 0.423061" fill="#3D3D3D" fill-opacity="0.38"/>
+    </svg>
+    <div class="content container">
+      <div class="content-inner">
+        <div class="category-section">
+          <span class="tag style-campaign">AI Search</span><span class="tag style-sector">B2B</span><span class="tag style-sector">Manufacturing</span><span class="tag style-special-tag">GEO</span><span class="tag style-special-tag">LLM Optimisations</span>        </div>
+        <h1 class="title">Taking 60% Share of Voice in AI Overviews for a Seating Manufacturer</h1>
+        <p class="excerpt">As Google&#8217;s AI Overviews began appearing above organic results for specialist seating searches, we extended this campaign into GEO. The result was 60% share of voice in AI Overviews, more than double that of key competitors.</p>
+      </div>
+    </div>
+</section>
+
+<section  class="seoworks-block-case-study-content">
+    <div class="case-study-content-inner container">
+        <div class="content-sidebar">
+            <div class="stats-section">
+                <div class="stats-section-inner">
+                  <picture class="attachment-post-thumbnail size-post-thumbnail" decoding="async">
+<source type="image/avif" srcset="https://www.seoworks.co.uk/wp-content/uploads/2026/06/auditoria-services-logo-2.png.avif 500w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/auditoria-services-logo-2-300x92.png.avif 300w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/auditoria-services-logo-2-200x61.png.avif 200w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/auditoria-services-logo-2-350x107.png.avif 350w" sizes="(max-width: 500px) 100vw, 500px"/>
+<img width="500" height="153" src="https://www.seoworks.co.uk/wp-content/uploads/2026/06/auditoria-services-logo-2.png" alt="" decoding="async" srcset="https://www.seoworks.co.uk/wp-content/uploads/2026/06/auditoria-services-logo-2.png 500w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/auditoria-services-logo-2-300x92.png 300w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/auditoria-services-logo-2-200x61.png 200w, https://www.seoworks.co.uk/wp-content/uploads/2026/06/auditoria-services-logo-2-350x107.png 350w" sizes="(max-width: 500px) 100vw, 500px"/>
+</picture>
+                                      <p class="stats-title">Key results</p>
+                                          <div class="stat">
+                                                       <p class="stat-number">60.6%</p>
+                                                                                    <p class="stat-description">Share of voice</p>
+                                                  </div>
+                                          <div class="stat">
+                                                       <p class="stat-number">Over double</p>
+                                                                                    <p class="stat-description">the competition</p>
+                                                  </div>
+                                          <div class="stat">
+                                                       <p class="stat-number">AI Overviews</p>
+                                                                                    <p class="stat-description">growth and dominance</p>
+                                                  </div>
+                                                        <a href="#contact-form" class="sidebar-cta">
+                    <p>Start Your Journey</p>
+                    <div class="arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                        <path d="M1.5 10.1842L5.8421 5.8421L1.5 1.49999" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+            </div>
+        </div>
+        <div class="content-holder">
+                                            <h2 class="wp-block-heading">Challenge</h2>
+              <p>Our client is a specialist in cinema, stadium and theatre seating. Founded in 1977, the company remains the only UK seating company to handle the entire process - from design through to manufacture, installation and servicing - under one roof.</p>
+<p>We have worked with them on organic SEO for several years, building strong, consistent visibility for the core seating terms that drive enquiries - from “retractable seating” to “lecture theatre seating”. </p>
+<p>As Google evolved to answer some of these searches with an AI Overview before any organic listings appear, the mission was to make sure the brand was also named and cited in the AI Overviews rather than ceding that space to key competitors.</p>
+                                  <h2 class="wp-block-heading">Solution</h2>
+              <p>Building on years of established organic SEO work, we extended the campaign into GEO, focusing on a core set of commercial keywords spanning their full product range. </p>
+<p>These ranged from high-volume category terms such as “bleacher seats” and “seating servicing” through to specific product searches like “retractable seating” and “cinema seating suppliers”.</p>
+<p>The campaign focused on three areas:</p>
+<p>Optimising existing service and product pages, and creating new ones, so that each search had a clear, well-structured page directly answering the buyer’s question - the format Google’s AI Overviews draw on most readily.</p>
+<p>Ensuring our client remained the dominant source cited for both branded queries and “what is” style definitional searches such as “what is a bleacher seat” and “bleacher seating meaning”, which often sit at the very top of the buying journey.</p>
+<p>Monitoring AI Overview mentions, citation positions and share of voice against competitors so the team could see exactly where the brand was winning or losing ground in AI-generated answers.</p>
+                                  <h2 class="wp-block-heading">Results</h2>
+              <p>Our client now holds AI Overview mentions for the large majority of its priority terms - including searches like “cinema seating suppliers” and “auditorium seating”, and definitional queries such as “what is a bleacher seat” and “bleacher seating meaning”. See some examples below:</p>
+<p><picture class="alignnone wp-image-18725 size-full">
+<source type="image/avif" data-lazy-srcset="/wp-content/uploads/2026/06/1.jpg.avif"/>
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="AI Overview 1" data-lazy-src="/wp-content/uploads/2026/06/1.jpg"/><noscript><img src="/wp-content/uploads/2026/06/1.jpg" alt="AI Overview 1"/></noscript>
+</picture>
+</p>
+<p><picture class="alignnone wp-image-18725 size-full">
+<source type="image/avif" data-lazy-srcset="/wp-content/uploads/2026/06/2.jpg.avif"/>
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="AI Overview 2" data-lazy-src="/wp-content/uploads/2026/06/2.jpg"/><noscript><img src="/wp-content/uploads/2026/06/2.jpg" alt="AI Overview 2"/></noscript>
+</picture>
+</p>
+<p><picture class="alignnone wp-image-18725 size-full">
+<source type="image/avif" data-lazy-srcset="/wp-content/uploads/2026/06/3.jpg.avif"/>
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="AI Overview 3" data-lazy-src="/wp-content/uploads/2026/06/3.jpg"/><noscript><img src="/wp-content/uploads/2026/06/3.jpg" alt="AI Overview 3"/></noscript>
+</picture>
+</p>
+<p>They now hold 60.6% share of voice in AI Overviews - more than double the combined share of the four next largest competitors in the space.</p>
+<p>For a family-run manufacturer based in Rotherham, this demonstrates that long-standing organic SEO foundations, combined with a focused GEO programme, translate directly into visibility in the new generation of AI-driven search.</p>
+                              <div class="navigation-controls">
+              <div class="back-button">
+                <p>Go back</p>
+                <a href="https://www.seoworks.co.uk/case-studies" class="back control-button">
+                  <div class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                      <path d="M5.8421 1.5L1.5 5.8421L5.8421 10.1842" stroke="#DCDCDC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  Back to Case Studies
+                </a>
+              </div>
+              <div class="read-more-buttons">
+                <p>Read more case studies</p>
+                <div class="buttons-section">
+                                    <a href="https://www.seoworks.co.uk/case-studies/?service=ai-search" class="link-filter-button">
+                    AI Search                    <div class="arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                        <path d="M1.5 10.1842L5.8421 5.8421L1.5 1.49999" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </a>
+                                    <a href="https://www.seoworks.co.uk/case-studies/?industry=b2b" class="link-filter-button">
+                    B2B                    <div class="arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                        <path d="M1.5 10.1842L5.8421 5.8421L1.5 1.49999" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </a>
+                                    <a href="https://www.seoworks.co.uk/case-studies/?industry=manufacturing" class="link-filter-button">
+                    Manufacturing                    <div class="arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                        <path d="M1.5 10.1842L5.8421 5.8421L1.5 1.49999" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </a>
+                                  </div>
+              </div>
+          </div>
+          <div class="share-bar ">
+              <div class="share-title">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                      <path d="M7.5 18.75C9.57107 18.75 11.25 17.0711 11.25 15C11.25 12.9289 9.57107 11.25 7.5 11.25C5.42893 11.25 3.75 12.9289 3.75 15C3.75 17.0711 5.42893 18.75 7.5 18.75Z" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M20.625 27.1875C22.6961 27.1875 24.375 25.5086 24.375 23.4375C24.375 21.3664 22.6961 19.6875 20.625 19.6875C18.5539 19.6875 16.875 21.3664 16.875 23.4375C16.875 25.5086 18.5539 27.1875 20.625 27.1875Z" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M20.625 10.3125C22.6961 10.3125 24.375 8.63357 24.375 6.5625C24.375 4.49143 22.6961 2.8125 20.625 2.8125C18.5539 2.8125 16.875 4.49143 16.875 6.5625C16.875 8.63357 18.5539 10.3125 20.625 10.3125Z" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M17.4723 8.58984L10.6543 12.9727" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.6543 17.0273L17.4723 21.4102" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <p>Share this case study</p>
+              </div>
+              <div class="share-icons">
+                  <a class="link-holder" href="https://twitter.com/intent/tweet?url=https://www.seoworks.co.uk/case-studies/share-of-voice-ai-overviews-for-seating-manufacturer/" target="_blank">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                          <path d="M20.1459 7H22.7055L17.1136 13.3907L23.692 22.087H18.5404L14.5061 16.8127L9.88994 22.087H7.32884L13.3099 15.2514L7 7H12.2808L15.9275 11.8209L20.1444 7H20.1459ZM19.2476 20.5551H20.6659L11.5109 8.45144H9.98898L19.2476 20.5551Z" fill="#85BD41"/>
+                      </svg>
+                  </a>
+                  <a class="link-holder" href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.seoworks.co.uk/case-studies/share-of-voice-ai-overviews-for-seating-manufacturer/" target="_blank">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                          <path d="M22.8206 16.2678V22.1164H19.4296V16.6594C19.4296 15.2882 18.9389 14.3529 17.7119 14.3529C16.775 14.3529 16.217 14.9838 15.972 15.5933C15.8825 15.8113 15.8595 16.1149 15.8595 16.42V22.1164H12.4669C12.4669 22.1164 12.5129 12.8747 12.4669 11.9165H15.8595V13.3622L15.8373 13.3955H15.8595V13.3622C16.3097 12.6687 17.1143 11.6771 18.916 11.6771C21.1473 11.6771 22.8206 13.1355 22.8206 16.2678ZM8.91901 7C7.75936 7 7 7.76089 7 8.76194C7 9.7408 7.73717 10.5247 8.87462 10.5247H8.89682C10.0803 10.5247 10.815 9.7408 10.815 8.76194C10.7944 7.76089 10.0803 7 8.91901 7ZM7.20133 22.1164H10.5923V11.9165H7.20133V22.1164Z" fill="#85BD41"/>
+                      </svg>
+                  </a>
+                  <a class="link-holder" href="/cdn-cgi/l/email-protection#aa95d9dfc8c0cfc9de97f8cfcbce8adec2c3d98acbd8dec3c9c6cf908afecbc1c3c4cd8a9c9a8f8af9c2cbd8cf8ac5cc8afcc5c3c9cf8ac3c48aebe38ae5dccfd8dcc3cfddd98accc5d88acb8af9cfcbdec3c4cd8ae7cbc4dfcccbc9dedfd8cfd88ccbc7da91c8c5ced397e9c2cfc9c18ac5dfde8adec2c3d98acbd8dec3c9c6cf8addd8c3dedecfc48ac8d38afec2cf8af9efe58afdc5d8c1d9908ac2dededad9908585dddddd84d9cfc5ddc5d8c1d984c9c584dfc185c9cbd9cf87d9dedfcec3cfd985d9c2cbd8cf87c5cc87dcc5c3c9cf87cbc387c5dccfd8dcc3cfddd987ccc5d887d9cfcbdec3c4cd87c7cbc4dfcccbc9dedfd8cfd885">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                          <path d="M26.25 6.5625L15 16.875L3.75 6.5625" stroke="#85BD41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M3.75 6.5625H26.25V22.5C26.25 22.7486 26.1512 22.9871 25.9754 23.1629C25.7996 23.3387 25.5611 23.4375 25.3125 23.4375H4.6875C4.43886 23.4375 4.2004 23.3387 4.02459 23.1629C3.84877 22.9871 3.75 22.7486 3.75 22.5V6.5625Z" stroke="#85BD41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12.9547 15L4.03906 23.1727" stroke="#85BD41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M25.9605 23.1727L17.0449 15" stroke="#85BD41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </a>
+              </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+<section data-wpr-lazyrender="1" class="seoworks-case-study-logo-slider">
+  <div class="swiper cs-logo-slider-swiper"> 
+    <div class="swiper-wrapper">
+            <div class="swiper-slide">
+        <img width="230" height="116" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20230%20116'%3E%3C/svg%3E" class="logo-slide-image" alt="" decoding="async" data-lazy-src="https://www.seoworks.co.uk/wp-content/uploads/2026/04/camden.svg" /><noscript><img width="230" height="116" src="https://www.seoworks.co.uk/wp-content/uploads/2026/04/camden.svg" class="logo-slide-image" alt="" decoding="async" /></noscript> 
+        </div>
+  
+            <div class="swiper-slide">
+        <picture class="logo-slide-image" decoding="async">
+<source type="image/avif" data-lazy-srcset="https://www.seoworks.co.uk/wp-content/uploads/2026/04/bcoc.png.avif"/>
+<img width="139" height="86" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20139%2086'%3E%3C/svg%3E" alt="" decoding="async" data-lazy-src="https://www.seoworks.co.uk/wp-content/uploads/2026/04/bcoc.png"/><noscript><img width="139" height="86" src="https://www.seoworks.co.uk/wp-content/uploads/2026/04/bcoc.png" alt="" decoding="async"/></noscript>
+</picture>
+ 
+        </div>
+  
+            <div class="swiper-slide">
+        <img width="206" height="65" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20206%2065'%3E%3C/svg%3E" class="logo-slide-image" alt="" decoding="async" data-lazy-srcset="https://www.seoworks.co.uk/wp-content/uploads/2026/04/benenden-health.png 206w, https://www.seoworks.co.uk/wp-content/uploads/2026/04/benenden-health-200x63.png 200w" data-lazy-sizes="(max-width: 206px) 100vw, 206px" data-lazy-src="https://www.seoworks.co.uk/wp-content/uploads/2026/04/benenden-health.png" /><noscript><img width="206" height="65" src="https://www.seoworks.co.uk/wp-content/uploads/2026/04/benenden-health.png" class="logo-slide-image" alt="" decoding="async" srcset="https://www.seoworks.co.uk/wp-content/uploads/2026/04/benenden-health.png 206w, https://www.seoworks.co.uk/wp-content/uploads/2026/04/benenden-health-200x63.png 200w" sizes="(max-width: 206px) 100vw, 206px" /></noscript> 
+        </div>
+  
+            <div class="swiper-slide">
+        <picture class="logo-slide-image" decoding="async">
+<source type="image/avif" data-lazy-srcset="https://www.seoworks.co.uk/wp-content/uploads/2026/04/os.png.avif 209w" sizes="(max-width: 209px) 100vw, 209px"/>
+<img width="209" height="50" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20209%2050'%3E%3C/svg%3E" alt="" decoding="async" data-lazy-srcset="https://www.seoworks.co.uk/wp-content/uploads/2026/04/os.png 209w, https://www.seoworks.co.uk/wp-content/uploads/2026/04/os-200x48.png 200w" data-lazy-sizes="(max-width: 209px) 100vw, 209px" data-lazy-src="https://www.seoworks.co.uk/wp-content/uploads/2026/04/os.png"/><noscript><img width="209" height="50" src="https://www.seoworks.co.uk/wp-content/uploads/2026/04/os.png" alt="" decoding="async" srcset="https://www.seoworks.co.uk/wp-content/uploads/2026/04/os.png 209w, https://www.seoworks.co.uk/wp-content/uploads/2026/04/os-200x48.png 200w" sizes="(max-width: 209px) 100vw, 209px"/></noscript>
+</picture>
+ 
+        </div>
+  
+            <div class="swiper-slide">
+        <picture class="logo-slide-image" decoding="async">
+<source type="image/avif" data-lazy-srcset="https://www.seoworks.co.uk/wp-content/uploads/2026/04/sheff-hallam.png.avif"/>
+<img width="119" height="64" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20119%2064'%3E%3C/svg%3E" alt="" decoding="async" data-lazy-src="https://www.seoworks.co.uk/wp-content/uploads/2026/04/sheff-hallam.png"/><noscript><img width="119" height="64" src="https://www.seoworks.co.uk/wp-content/uploads/2026/04/sheff-hallam.png" alt="" decoding="async"/></noscript>
+</picture>
+ 
+        </div>
+  
+          </div>
+  </div>    
+</section>
+
+<section data-wpr-lazyrender="1" class="seoworks-case-study-contact-section" id="contact-form">
+    <div class="container">
+    <div class="left-section">
+      <h3>Get in touch with us today</h3>
+      <div class="content">
+        <p>As an award-winning provider of digital marketing, we work relentlessly in pursuit of one key goal &#8211; to get businesses more customers online.</p>
+<p><strong>Want to see those abilities in action? Get in touch.</strong></p>
+      </div>
+    </div>
+    <div class="form-section">
+      <div class="form-holder">
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://js.hsforms.net/forms/embed/7971204.js" defer></script>
+<div class="hs-form-frame" data-region="na1" data-form-id="ad27d61c-400f-4359-822c-9b110ba4a3d8" data-portal-id="7971204"></div>      </div>
+    </div>
+  </div>
+</section>
+
+
+	</div><!-- #content -->
+
+	<footer data-wpr-lazyrender="1" id="colophon" class="site-footer">
+
+		<section  class="footer-awards">
+  <div class="sections-tb">
+  	<div class="container">
+  		<div class="row justify-content-around">
+        <div class="col-12">
+          <p><a href="/awards/"><picture decoding="async" class="alignnone size-full wp-image-6617">
+<source type="image/avif" data-lazy-srcset="/wp-content/uploads/2025/08/awards-banner-2025.png.avif"/>
+<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201391%20170'%3E%3C/svg%3E" alt="Award Winning Agency" width="1391" height="170" data-lazy-src="/wp-content/uploads/2025/08/awards-banner-2025.png"/><noscript><img decoding="async" src="/wp-content/uploads/2025/08/awards-banner-2025.png" alt="Award Winning Agency" width="1391" height="170"/></noscript>
+</picture>
+</a></p>
+        </div>
+  		</div>
+  	</div>
+  </div>
+</section>
+<section  class="footer-callToAction">
+  <svg class="large" width="280px" height="280px" viewBox="0 0 500 500">
+    <g id="Gear-Full" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="iconmonstr-gear-9" fill="#0000000D" fill-rule="nonzero">
+          <path d="M500,276.4375 L500,223.5625 L456.083333,223.520833 C454.854167,214 453,204.6875 450.520833,195.604167 L491.083333,178.75 L470.833333,129.895833 L430.25,146.666667 C425.5,138.416667 420.208333,130.520833 414.395833,123.020833 L445.458333,91.9166667 L408.0625,54.5416667 L376.958333,85.5833333 C369.479167,79.7916667 361.583333,74.4791667 353.3125,69.75 L370.083333,29.1458333 L321.25,8.91666667 L304.395833,49.4791667 C295.3125,47.0208333 286,45.1458333 276.479167,43.9375 L276.458333,0 L223.5625,0 L223.520833,43.9375 C214,45.1458333 204.6875,47.0208333 195.604167,49.4791667 L178.75,8.91666667 L129.895833,29.1458333 L146.666667,69.75 C138.416667,74.4791667 130.520833,79.7916667 123.020833,85.5833333 L91.9166667,54.5416667 L54.5416667,91.9166667 L85.5833333,123.020833 C79.7916667,130.520833 74.4791667,138.416667 69.75,146.666667 L29.1458333,129.895833 L8.91666667,178.75 L49.4791667,195.604167 C47.0208333,204.6875 45.1458333,214 43.9375,223.520833 L0,223.5625 L0,276.4375 L43.9375,276.479167 C45.1458333,286 47.0208333,295.3125 49.4791667,304.395833 L8.91666667,321.25 L29.1458333,370.104167 L69.75,353.333333 C74.5,361.583333 79.7916667,369.479167 85.5833333,376.979167 L54.5416667,408.083333 L91.9166667,445.458333 L123.020833,414.416667 C130.520833,420.208333 138.416667,425.520833 146.666667,430.25 L129.895833,470.854167 L178.75,491.083333 L195.604167,450.520833 C204.6875,452.979167 214,454.854167 223.520833,456.0625 L223.5625,500 L276.458333,500 L276.5,456.0625 C286.020833,454.854167 295.333333,452.979167 304.416667,450.520833 L321.270833,491.083333 L370.125,470.854167 L353.354167,430.25 C361.604167,425.5 369.5,420.208333 377,414.416667 L408.104167,445.458333 L445.5,408.083333 L414.4375,376.979167 C420.229167,369.479167 425.541667,361.583333 430.291667,353.333333 L470.875,370.104167 L491.125,321.25 L450.5625,304.395833 C453.020833,295.3125 454.895833,286 456.125,276.479167 L500,276.4375 Z M250,392 C171.5805,392 108,328.4195 108,250 C108,171.5805 171.5805,108 250,108 C328.4195,108 392,171.5805 392,250 C392,328.4195 328.4195,392 250,392 Z" id="Shape"></path>
+      </g>
+    </g>
+  </svg>
+  <svg class="small" width="280px" height="280px" viewBox="0 0 500 500">
+    <g id="Gear-Full" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="iconmonstr-gear-9" fill="#0000000D" fill-rule="nonzero">
+          <path d="M500,276.4375 L500,223.5625 L456.083333,223.520833 C454.854167,214 453,204.6875 450.520833,195.604167 L491.083333,178.75 L470.833333,129.895833 L430.25,146.666667 C425.5,138.416667 420.208333,130.520833 414.395833,123.020833 L445.458333,91.9166667 L408.0625,54.5416667 L376.958333,85.5833333 C369.479167,79.7916667 361.583333,74.4791667 353.3125,69.75 L370.083333,29.1458333 L321.25,8.91666667 L304.395833,49.4791667 C295.3125,47.0208333 286,45.1458333 276.479167,43.9375 L276.458333,0 L223.5625,0 L223.520833,43.9375 C214,45.1458333 204.6875,47.0208333 195.604167,49.4791667 L178.75,8.91666667 L129.895833,29.1458333 L146.666667,69.75 C138.416667,74.4791667 130.520833,79.7916667 123.020833,85.5833333 L91.9166667,54.5416667 L54.5416667,91.9166667 L85.5833333,123.020833 C79.7916667,130.520833 74.4791667,138.416667 69.75,146.666667 L29.1458333,129.895833 L8.91666667,178.75 L49.4791667,195.604167 C47.0208333,204.6875 45.1458333,214 43.9375,223.520833 L0,223.5625 L0,276.4375 L43.9375,276.479167 C45.1458333,286 47.0208333,295.3125 49.4791667,304.395833 L8.91666667,321.25 L29.1458333,370.104167 L69.75,353.333333 C74.5,361.583333 79.7916667,369.479167 85.5833333,376.979167 L54.5416667,408.083333 L91.9166667,445.458333 L123.020833,414.416667 C130.520833,420.208333 138.416667,425.520833 146.666667,430.25 L129.895833,470.854167 L178.75,491.083333 L195.604167,450.520833 C204.6875,452.979167 214,454.854167 223.520833,456.0625 L223.5625,500 L276.458333,500 L276.5,456.0625 C286.020833,454.854167 295.333333,452.979167 304.416667,450.520833 L321.270833,491.083333 L370.125,470.854167 L353.354167,430.25 C361.604167,425.5 369.5,420.208333 377,414.416667 L408.104167,445.458333 L445.5,408.083333 L414.4375,376.979167 C420.229167,369.479167 425.541667,361.583333 430.291667,353.333333 L470.875,370.104167 L491.125,321.25 L450.5625,304.395833 C453.020833,295.3125 454.895833,286 456.125,276.479167 L500,276.4375 Z M250,392 C171.5805,392 108,328.4195 108,250 C108,171.5805 171.5805,108 250,108 C328.4195,108 392,171.5805 392,250 C392,328.4195 328.4195,392 250,392 Z" id="Shape"></path>
+      </g>
+    </g>
+  </svg>
+  <!-- <div class="sections"> -->
+  	<div class="container">
+  		<div class="container-inner">
+        <div class="column">
+          <div class="footer-callToAction-content">
+            <div class="footer-callToAction-content_icon">
+              <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" width="512px" height="512px">
+              <path d="M6,2h48c3.252,0,6,2.748,6,6v33c0,3.252-2.748,6-6,6H25.442L15.74,57.673C15.546,57.885,15.276,58,15,58  c-0.121,0-0.243-0.022-0.361-0.067C14.254,57.784,14,57.413,14,57V47H6c-3.252,0-6-2.748-6-6L0,8C0,4.748,2.748,2,6,2z" fill="#FFFFFF"/>
+              </svg>
+            </div>
+                        <div class="footer-callToAction-content_info">
+              <a href="tel:0800 292 2410">0800 292 2410</a>
+              <p>Monday to Friday:<span> 8:30AM - 6PM</span></p>
+            </div>
+                        </div>
+        </div>
+
+        <div class="column">
+          <div class="footer-callToAction-content">
+            <div class="footer-callToAction-content_icon">
+              <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 511.626 511.626" style="enable-background:new 0 0 511.626 511.626;" xml:space="preserve">
+              <g>
+              	<g>
+              		<path d="M49.106,178.729c6.472,4.567,25.981,18.131,58.528,40.685c32.548,22.554,57.482,39.92,74.803,52.099    c1.903,1.335,5.946,4.237,12.131,8.71c6.186,4.476,11.326,8.093,15.416,10.852c4.093,2.758,9.041,5.852,14.849,9.277    c5.806,3.422,11.279,5.996,16.418,7.7c5.14,1.718,9.898,2.569,14.275,2.569h0.287h0.288c4.377,0,9.137-0.852,14.277-2.569    c5.137-1.704,10.615-4.281,16.416-7.7c5.804-3.429,10.752-6.52,14.845-9.277c4.093-2.759,9.229-6.376,15.417-10.852    c6.184-4.477,10.232-7.375,12.135-8.71c17.508-12.179,62.051-43.11,133.615-92.79c13.894-9.703,25.502-21.411,34.827-35.116    c9.332-13.699,13.993-28.07,13.993-43.105c0-12.564-4.523-23.319-13.565-32.264c-9.041-8.947-19.749-13.418-32.117-13.418H45.679    c-14.655,0-25.933,4.948-33.832,14.844C3.949,79.562,0,91.934,0,106.779c0,11.991,5.236,24.985,15.703,38.974    C26.169,159.743,37.307,170.736,49.106,178.729z" fill="#FFFFFF"/>
+              		<path d="M483.072,209.275c-62.424,42.251-109.824,75.087-142.177,98.501c-10.849,7.991-19.65,14.229-26.409,18.699    c-6.759,4.473-15.748,9.041-26.98,13.702c-11.228,4.668-21.692,6.995-31.401,6.995h-0.291h-0.287    c-9.707,0-20.177-2.327-31.405-6.995c-11.228-4.661-20.223-9.229-26.98-13.702c-6.755-4.47-15.559-10.708-26.407-18.699    c-25.697-18.842-72.995-51.68-141.896-98.501C17.987,202.047,8.375,193.762,0,184.437v226.685c0,12.57,4.471,23.319,13.418,32.265    c8.945,8.949,19.701,13.422,32.264,13.422h420.266c12.56,0,23.315-4.473,32.261-13.422c8.949-8.949,13.418-19.694,13.418-32.265    V184.437C503.441,193.569,493.927,201.854,483.072,209.275z" fill="#FFFFFF"/>
+              	</g>
+              </svg>
+            </div>
+                        <div class="footer-callToAction-content_info">
+              <a href="/cdn-cgi/l/email-protection#e28b8c848da291878d958d908991cc818dcc9789"><span class="__cf_email__" data-cfemail="86efe8e0e9c6f5e3e9f1e9f4edf5a8e5e9a8f3ed">[email&#160;protected]</span></a>
+              <p>Our expert team will reply as soon as possible.</p>
+            </div>
+                    </div>
+        </div>
+
+        <div class="column">
+          <div class="footer-callToAction-content quote">
+            <div class="footer-callToAction-content_icon shake">
+              <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512px" height="512px">
+                <g>
+                  <g>
+                    <path d="M467.812,431.851l-36.629-61.056c-16.917-28.181-25.856-60.459-25.856-93.312V224c0-67.52-45.056-124.629-106.667-143.04    V42.667C298.66,19.136,279.524,0,255.993,0s-42.667,19.136-42.667,42.667V80.96C151.716,99.371,106.66,156.48,106.66,224v53.483    c0,32.853-8.939,65.109-25.835,93.291l-36.629,61.056c-1.984,3.307-2.027,7.403-0.128,10.752c1.899,3.349,5.419,5.419,9.259,5.419    H458.66c3.84,0,7.381-2.069,9.28-5.397C469.839,439.275,469.775,435.136,467.812,431.851z" fill="#FFFFFF"/>
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <path d="M188.815,469.333C200.847,494.464,226.319,512,255.993,512s55.147-17.536,67.179-42.667H188.815z" fill="#FFFFFF"/>
+                  </g>
+                </g>
+              </svg>
+            </div>
+                        <div class="footer-callToAction-content_info">
+                                <a href="https://www.seoworks.co.uk/contact-us">Request a free quote</a>
+                              <p>Let's discuss how to make your website visible online.</p>
+            </div>
+                    </div>
+        </div>
+
+  		</div>
+  	</div>
+  <!-- </div> -->
+</section>
+<section  class="footer-widgets">
+  <div class="container">
+    <div class="inner-container">
+      <div class="column">
+        <aside class="widget">
+          <div id="text-9" class="widget-content widget_text"><h6 class="widget-title">Get in touch</h6>			<div class="textwidget"><ul>
+<li><a href="/seo-services-london/">London</a></li>
+<li><a href="/sheffield-seo/">Sheffield</a></li>
+<li><a href="/seo-leeds/">Leeds</a></li>
+<li><a href="/locations/manchester-seo/">Manchester</a></li>
+<li><a href="/birmingham-seo/">Birmingham</a></li>
+</ul>
+<div class="footer-social">
+<ul>
+<li style="display: inline; margin-right: 5px;"><a href="https://www.linkedin.com/company/seoworksuk/"><img decoding="async" class="size-medium wp-image-13722 alignleft" role="img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" alt="" width="300" height="300" data-lazy-src="https://www.seoworks.co.uk/wp-content/uploads/2023/12/linked-in-white-1.svg" /><noscript><img decoding="async" class="size-medium wp-image-13722 alignleft" role="img" src="https://www.seoworks.co.uk/wp-content/uploads/2023/12/linked-in-white-1.svg" alt="" width="300" height="300" /></noscript></a></li>
+<li style="display: inline; margin-right: 5px;"><a href="https://www.instagram.com/seoworksuk/"><img decoding="async" class="alignnone size-medium wp-image-13723" role="img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" alt="" width="300" height="300" data-lazy-src="https://www.seoworks.co.uk/wp-content/uploads/2023/12/instagram-white-1.svg" /><noscript><img decoding="async" class="alignnone size-medium wp-image-13723" role="img" src="https://www.seoworks.co.uk/wp-content/uploads/2023/12/instagram-white-1.svg" alt="" width="300" height="300" /></noscript></a></li>
+<li style="display: inline; margin-right: 5px;"><a href="https://www.facebook.com/SEOWorksUK/"><img decoding="async" class="alignnone size-medium wp-image-13724" role="img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" alt="" width="300" height="300" data-lazy-src="https://www.seoworks.co.uk/wp-content/uploads/2023/12/facebook-white-1.svg" /><noscript><img decoding="async" class="alignnone size-medium wp-image-13724" role="img" src="https://www.seoworks.co.uk/wp-content/uploads/2023/12/facebook-white-1.svg" alt="" width="300" height="300" /></noscript></a></li>
+<li><a href="https://x.com/seoworksuk/"><img decoding="async" class="alignnone size-medium wp-image-13725" role="img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" alt="" width="300" height="300" data-lazy-src="https://www.seoworks.co.uk/wp-content/uploads/2023/12/x-white-1.svg" /><noscript><img decoding="async" class="alignnone size-medium wp-image-13725" role="img" src="https://www.seoworks.co.uk/wp-content/uploads/2023/12/x-white-1.svg" alt="" width="300" height="300" /></noscript></a></li>
+</ul>
+</div>
+</div>
+		</div>        </aside>
+      </div>
+
+      <div class="column">
+        <aside class="widget">
+          <div id="text-8" class="widget-content widget_text"><h6 class="widget-title">Integrated Search Services</h6>			<div class="textwidget"><p><span style="font-weight: 400;">The SEO Works are a search-focused growth partner for leading brands, ambitious mid-market businesses, and prospering SMEs that want measurable commercial impact from AI Search, SEO and PPC. We offer fully bespoke <a href="/services/">digital marketing services</a> including Integrated Organic Search (<a href="https://www.seoworks.co.uk/seo-services/">SEO</a> &amp; <a href="https://www.seoworks.co.uk/seo-services/generative-engine-optimisation-geo/">GEO</a>), <a href="/ppc-services/">PPC</a>, <a href="https://www.seoworks.co.uk/paid-social-media-services/">Paid Social</a>, <a href="/programmatic-advertising-services/">Programmatic</a> and <a href="/website-development-design/">Web Design</a> designed to get your business more customers online.</span></p>
+</div>
+		</div>        </aside>
+      </div>
+
+      <div class="column">
+        <aside class="widget">
+          <div id="text-7" class="widget-content widget_text"><h6 class="widget-title">Trust SEO Works</h6>			<div class="textwidget"><p><span style="font-weight: 400;">We are proud of our reputation as an integrated <a href="https://www.seoworks.co.uk/">SEO Agency</a> and <a href="/seo-services/generative-engine-optimisation-geo/">GEO agency</a> earned through building strong relationships and results for our clients. We are the preferred choice for <a href="/seo-services/">SEO services</a> and <a href="/services">digital marketing</a> of leading companies in public &amp; private sectors. View our <a href="https://www.seoworks.co.uk/case-studies/">Digital Marketing Case Studies</a> for more information.</span></p>
+</div>
+		</div>        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+<div  class="footer-site-info site-info">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="site-info_menu">
+          <nav>
+            <div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-11762" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11762"><a href="https://www.seoworks.co.uk/culture/">Careers at The SEO Works</a></li>
+<li id="menu-item-10154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10154"><a href="https://www.seoworks.co.uk/locations/">Our Locations</a></li>
+<li id="menu-item-6473" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6473"><a href="https://www.seoworks.co.uk/terms-and-conditions/">Terms</a></li>
+<li id="menu-item-6472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6472"><a href="https://www.seoworks.co.uk/privacy/">Privacy</a></li>
+<li id="menu-item-6313" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6313"><a href="/sitemap_index.xml">XML Sitemap</a></li>
+<li id="menu-item-6263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6263"><a href="https://www.seoworks.co.uk/html-sitemap/">HTML Sitemap</a></li>
+<li id="menu-item-21568" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21568"><a href="/entitymap.html">Entitymap</a></li>
+<li id="menu-item-18967" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18967"><a href="https://www.seoworks.co.uk/llm-info.html">Info for AI and LLMs</a></li>
+<li id="menu-item-22283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22283"><a href="https://www.seoworks.co.uk/scam-alert/">Scam Alert</a></li>
+</ul></div>          </nav>
+        </div>
+        <div class="site-info_copyright copyright">
+          <p>Copyright 2026 The SEO Works Limited | Company number 06845547 | Founded 2009 | Integrated GEO &amp; SEO that works</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- .site-info -->
+
+	</footer><!-- #colophon -->
+	<div  id="back-top-top"></div>
+</div><!-- #page -->
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/seoworks/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script defer data-cfasync="false">
+window.addEventListener("load", function() {
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-54R22D');
+})
+</script>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-54R22D"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script type="text/rocketlazyloadscript" id="extend-blocks-cover-js" data-rocket-src="https://www.seoworks.co.uk/wp-content/plugins/seoworks-blocks/build/block-extensions/cover/frontend.js?ver=1775032288" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" id="extend-blocks-group-js" data-rocket-src="https://www.seoworks.co.uk/wp-content/plugins/seoworks-blocks/build/block-extensions/group/frontend.js?ver=1776947305" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="extend-blocks-images-js" data-rocket-src="https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/plugins/seoworks-blocks/build/block-extensions/images/frontend.js?ver=1792412248" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://www.seoworks.co.uk","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+</script>
+<script type="text/rocketlazyloadscript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+</script>
+<script id="rocket_lazyload_css-js-extra">
+var rocket_lazyload_css_data = {"threshold":"300"};
+//# sourceURL=rocket_lazyload_css-js-extra
+</script>
+<script id="rocket_lazyload_css-js-after">
+!function o(n,a,c){function l(t,e){if(!a[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(u)return u(t,!0);throw(e=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",e}r=a[t]={exports:{}},n[t][0].call(r.exports,function(e){return l(n[t][1][e]||e)},r,r.exports,o,n,a,c)}return a[t].exports}for(var u="function"==typeof require&&require,e=0;e<c.length;e++)l(c[e]);return l}({1:[function(e,t,r){{let r="undefined"==typeof rocket_pairs?[]:rocket_pairs,o=(("undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs).map(t=>{var e=t.selector;document.querySelectorAll(e).forEach(e=>{e.setAttribute("data-rocket-lazy-bg-"+t.hash,"excluded")})}),document.querySelector("#wpr-lazyload-bg-container"));var a=rocket_lazyload_css_data.threshold||300;let n=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&r.filter(e=>t.target.matches(e.selector)).map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,o.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{n.unobserve(e),e.setAttribute("data-rocket-lazy-bg-"+t.hash,"loaded")}))})})},{rootMargin:a+"px"});function c(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&r.forEach(t=>{try{document.querySelectorAll(t.selector).forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&(n.observe(e),(t.elements||=[]).push(e))})}catch(e){console.error(e)}})}c(),(()=>{let r=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType)return(t=new r(t)).observe(e,{attributes:!0,childList:!0,subtree:!0}),t}})()(document.querySelector("body"),c)}},{}]},{},[1]);
+//# sourceURL=rocket_lazyload_css-js-after
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="page-js-js" data-rocket-src="https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/themes/seoworks/assets/build/js/page.js?ver=1792412248" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="seoworks-skip-link-focus-fix-js" data-rocket-src="https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/themes/seoworks/js/skip-link-focus-fix.js?ver=1792412248" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" id="main-js-js" data-rocket-src="https://www.seoworks.co.uk/wp-content/themes/seoworks/js/main.js?ver=1721723848" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="swiper-js-js" data-rocket-src="https://www.seoworks.co.uk/wp-content/cache/min/1/npm/swiper@10/swiper-bundle.min.js?ver=1792412286" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="case-studies-js-js" data-rocket-src="https://www.seoworks.co.uk/wp-content/cache/min/1/wp-content/themes/seoworks/assets/build/js/casestudy.js?ver=1792412286" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" id="heartbeat-js" data-rocket-src="https://www.seoworks.co.uk/wp-content/plugins/wp-rocket/assets/js/heartbeat.js?ver=3.24" data-rocket-defer defer></script>
+<div  hidden data-wpu-integrity="b4ea0b907ce36a6ee29af0ef7fdf481e"></div>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.seoworks.co.uk/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>var rocket_beacon_data = {"ajax_url":"https:\/\/www.seoworks.co.uk\/wp-admin\/admin-ajax.php","nonce":"ae51b9d0d2","url":"https:\/\/www.seoworks.co.uk\/case-studies\/share-of-voice-ai-overviews-for-seating-manufacturer","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}</script><script data-name="wpr-wpr-beacon" src='https://www.seoworks.co.uk/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js' async></script></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
+<!-- plugin=object-cache-pro client=phpredis metric#hits=9973 metric#misses=14 metric#hit-ratio=99.9 metric#bytes=5136508 metric#prefetches=0 metric#store-reads=137 metric#store-writes=13 metric#store-hits=364 metric#store-misses=7 metric#sql-queries=36 metric#ms-total=1469.47 metric#ms-cache=49.62 metric#ms-cache-avg=0.3330 metric#ms-cache-ratio=3.4 sample#redis-hits=7655561 sample#redis-misses=335951 sample#redis-hit-ratio=95.8 sample#redis-ops-per-sec=53 sample#redis-evicted-keys=0 sample#redis-used-memory=96388112 sample#redis-used-memory-rss=87638016 sample#redis-memory-fragmentation-ratio=0.9 sample#redis-connected-clients=1 sample#redis-tracking-clients=0 sample#redis-rejected-connections=0 sample#redis-keys=92463 -->

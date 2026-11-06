@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import { gsap, ScrollTrigger, prefersReduced, scrollToTarget } from '../lib/motion';
-import { WORK } from '../data';
+import { WORK } from '../case-studies';
 import { Roll, Spark } from './Primitives';
 import CaseModal from './CaseModal';
 
@@ -87,23 +87,19 @@ export default function Portfolio() {
         <div className="work__head">
           <div>
             <p className="section-kicker section-kicker--light">
-              <span className="kicker-dot" /> My selected work
+              <span className="kicker-dot" /> Selected work / Published studies
             </p>
             <h2 className="work__title">
-              {'Concepts built for the new search.'.split(' ').map((w, i) => (
+              {'Search strategies. Reported impact.'.split(' ').map((w, i) => (
                 <span key={i} className="sw">
                   <span className="sw__in">{w}</span>
                 </span>
               ))}
             </h2>
           </div>
-          <p className="work__note">
-            <span className="work__note-badge">Concept work</span>
-            These illustrate my approach, not completed client engagements. My case studies are coming soon.
-          </p>
         </div>
 
-        <div className="work__row" role="tablist" aria-label="Concept projects">
+        <div className="work__row" role="tablist" aria-label="Published case studies">
           {WORK.map((w, i) => {
             const on = i === active;
             return (
@@ -126,7 +122,7 @@ export default function Portfolio() {
 
                 <div className="work__body" aria-hidden={!on}>
                   <div className="work__media" onPointerMove={tilt} onPointerLeave={untilt}>
-                    <img src={w.image} alt={`Concept artwork for ${w.title}`} loading="lazy" />
+                    <img src={w.image} alt={`Source case-study image for ${w.title}`} loading="lazy" />
                     {on && (
                       <button
                         type="button"
@@ -140,7 +136,7 @@ export default function Portfolio() {
                     )}
                     <div className="work__media-shade" />
                     <span className="work__media-tag">
-                      <Spark className="work__media-spark" /> Concept {w.num} · Placeholder
+                      <Spark className="work__media-spark" /> Study {i + 1}
                     </span>
                   </div>
                   <div className="work__copy">
@@ -162,7 +158,7 @@ export default function Portfolio() {
                         setModal({ i, rect: media?.getBoundingClientRect() ?? null });
                       }}
                     >
-                      <Roll>View concept</Roll>
+                      <Roll>View case study</Roll>
                       <span className="work__cta-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                           <path d="M7 17 17 7M8 7h9v9" />
@@ -183,7 +179,7 @@ export default function Portfolio() {
           <div className="work__progress">
             <div className="work__progress-fill" />
           </div>
-          <span className="work__hint">Scroll or select a concept</span>
+          <span className="work__hint">Scroll or select a case study</span>
         </div>
       </div>
       {modal && (

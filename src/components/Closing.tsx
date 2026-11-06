@@ -178,6 +178,9 @@ export default function Closing() {
         </div>
         <div className="footer__bar">
           <span>© {new Date().getFullYear()} Harry Mian</span>
+          <a href="tel:+18722499666" className="roll-trigger">
+            <Roll>(872) 249-9666</Roll>
+          </a>
           <a href={`mailto:${EMAIL}`} className="roll-trigger">
             <Roll>{EMAIL}</Roll>
           </a>
